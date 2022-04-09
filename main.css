@@ -1,5 +1,5 @@
 *{  
-    text-decoration: none;
+    text-decoration: none !important;
     margin: 0;
     padding: 0;
 }
@@ -130,7 +130,7 @@ body{
 
 
 .footer{
-    transform: translateY(45%);
+    transform: translateY(36%);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
