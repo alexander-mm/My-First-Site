@@ -7,45 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Orbitron&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Electrolize&family=Michroma&family=Orbitron&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <title>Code Engineers Group</title>
     <link rel="icon" href="./imgs/icontab.ico.jpg">
 </head>
 <body>
-    <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color:black">
-            <a href="./index.html" class="navbar-brand text-white">
-                <img src="./imgs/logo.png" height="50px" title="Inicio">
-                Code Engineers Group
-            </a>
-            <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a href="./index.html" class="nav-link font-weight-bold">INICIO</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a href="./pags/nosotros.html" class="nav-link font-weight-bold">NOSOTROS</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active font-weight-bold" data-toggle="dropdown" data-target="desplegable" href="./pags/proyectos.html">PROYECTOS</a>
-                        <div class="dropdown-menu bg-dark">
-                            <a class="dropdown-item text-white bg-dark" href="./pags/proyectos.html">Plantillas de Muestra</a>
-                            <a class="dropdown-item text-white bg-dark" href="./pags/proyectos.html">Trabajos Realizados</a>
-                        </div>
-                    </li>
-                    <li class="nav-item active">
-                        <a href="./pags/servicios.html" class="nav-link font-weight-bold">SERVICIOS</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a href="./pags/contacto.html" class="nav-link font-weight-bold">CONTACTO</a>
-                    </li>
+    <header id="unique" >
+        <div class="container">
+            <nav>
+                <ul class="menu-container">
+                    <div><a id="index" href="index.html"><img class="logopag" src="./imgs/logo.png" title="Inicio"></a></div>
+                    <li class="inicio"><a href="index.html">INICIO</a></li>  
+                    <li class="nosotros"><a href="./pags/nosotros.html">NOSOTROS</a></li> 
+                    <li class="proyectos"><a href="./pags/proyectos.html">PROYECTOS</a></li>
+                    <li class="servicios"><a href="./pags/servicios.html">SERVICIOS</a></li>
+                    <li class="contacto"><a href="./pags/contacto.html">CONTACTO</a></li>
                 </ul>
-            </div>
-        </nav>        
+            </nav>
+        </div>        
     </header>
     <section class="tiulo-container">
         <h1 class="titulo__pag">Code Engineers Group</h1>
@@ -63,8 +42,5 @@
             <h6 class="copyright--uppercase">©Copyright All Rights Reserved - Code Engineers Group 2022</h6>
         </div>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 </body>
 </html>
