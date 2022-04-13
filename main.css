@@ -1,8 +1,9 @@
 *{  
-    text-decoration: none;
+    text-decoration: none !important;
     margin: 0;
     padding: 0;
 }
+
 body{
     background-image: url(./imgs/background.jpg);
     background-position: 115px 0px;
@@ -13,9 +14,11 @@ body{
     width: 100%;
     z-index: 10;
 }
-.container{
-    background-color: dimgray;
+
+.containerx{
+    background-image: linear-gradient(to bottom, black, gray);
 }
+
 .menu-container{
     display: grid;
     grid-template-columns: 60% 8% 8% 8% 8% 8%;
@@ -24,45 +27,75 @@ body{
     font-size: 0.85em;
     list-style-type: none;
 }
+
 .logopag{
     margin: 5px 0 5px 5px;
     width: 3.5em;
 }
+
 .menu-container .inicio{
     margin-left: 60px;
     justify-self: start;
     grid-column-start: 2;
 }
+
 .menu-container .nosotros{
     justify-self: center;
     grid-column-start: 3;
 }
+
 .menu-container .proyectos{
     justify-self: center;
     grid-column-start: 4;
 }
+
 .menu-container .servicios{
     margin-left: 10px;
     justify-self: center;
     grid-column-start: 5;
 }
+
 .menu-container .contacto{
     justify-self: center;
     grid-column-start: 6;
 }
+
 .menu-container a{
     font-size: 15px;
     font-weight: bold;
-    color: black;
+    color: white;
     border-radius: 5px;
+    transition: font-size 0.5s;
 }
+
 #index{
     background-color: rgba(10, 20, 30, 0);
 }
+
 .menu-container li a:hover {
-    color: white;
+    color: gold;
+    font-size: 15.5px;
+
+    animation-name: un_efecto;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0s;
 }
 
+@keyframes un_efecto{
+    0%{ font-size: 15.5px; }
+    10%{ font-size: 16px; }
+    20%{ font-size: 16.5px; }
+    30%{ font-size: 17px; }
+    40%{ font-size: 17.5px; }
+    50%{ font-size: 18px; }
+    60%{ font-size: 17.5px; }
+    70%{ font-size: 17px; }
+    80%{ font-size: 16.5px; }
+    90%{ font-size: 16px; }
+    100%{ font-size: 15.5px; }
+} 
 
 .tiulo-container{
     display: grid;
@@ -70,6 +103,7 @@ body{
     align-items: center;
     transform: translateY(100px);
 }
+
 .titulo__pag{
     grid-row: 1 / 2;
     font-family: 'Electrolize';
@@ -77,7 +111,16 @@ body{
     color: white;
     margin-top: 11%;
     margin-left: 5%;
+    width: 95%;
+    animation-name: move-right;
+    animation-duration: 3s;
+    animation-delay: 0s;
 }
+
+@keyframes move-right{
+    0%{ margin-left: 100%; }
+} 
+
 .titulo__subpag{
     grid-row: 2 / -1;
     font-family: 'Michroma';
@@ -85,11 +128,17 @@ body{
     color: white;
     margin-left: 45%;
     margin-bottom: 10%;
+    animation-name: move-left;
+    animation-duration: 3s;
+    animation-delay: 0s;
 }
 
+@keyframes move-left{
+    0%{ margin-left: 0%; }
+}
 
 .footer{
-    transform: translateY(45%);
+    transform: translateY(36%);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -99,6 +148,7 @@ body{
     grid-column: 1 / 2;
     margin-left: 10%;
 }
+
 .dev2{
     position: absolute;
     grid-column: 1 / 2;
@@ -111,6 +161,7 @@ body{
     align-self: end;
     margin-right: 5%;
 }
+
 #copyright{
     grid-column: 2 / 3;
     justify-self: center;
@@ -118,55 +169,12 @@ body{
     margin-top: 0%;
     color: white;
 }
+
 .copyright--uppercase{
     text-transform: uppercase;
 }
 
-@media screen and ( max-width: 412px){
-    .menu-container{
-        display: grid;
-        grid-template-columns: 5% 19% 19% 19% 19% 19%;
-        font-family: 'Michroma';
-        list-style-type: none;
-    }
-    
-    .menu-container .inicio{
-        justify-self: end;
-        align-self: start;
-        grid-column-start: 2;
-    }
-    .menu-container .nosotros{
-        justify-self: center;
-        align-self: start;
-        grid-column-start: 3;
-    }
-    .menu-container .proyectos{
-        justify-self: center;
-        align-self: start;
-        grid-column-start: 4;
-    }
-    .menu-container .servicios{
-        margin-left: 10px;
-        justify-self: center;
-        align-self: start;
-        grid-column-start: 5;
-    }
-    .menu-container .contacto{
-        justify-self: center;
-        align-self: start;
-        grid-column-start: 6;
-    }
-
-    .menu-container a{
-        font-size: 6px;
-        font-weight: bold;
-        color: black;
-    }
-
-    .logopag{
-        margin: 5px 0 5px 5px;
-        width: 3em;
-    }
+@media screen and ( max-width: 412px){ 
 
     .tiulo-container{
         display: grid;
@@ -174,14 +182,16 @@ body{
         row-gap: 10px;
         transform: translateY(0%);
     }
+
     .titulo__pag{
-        margin: 0;
+        margin: 150px 0 20px 10px;
         grid-row: 1 / 2;
         font-family: 'Electrolize';
         font-size: 50px;
         color: white;
-        justify-self: right;
+        justify-self: center;
     }
+
     .titulo__subpag{
         grid-row: 2 / -1;
         font-family: 'Michroma';
@@ -204,6 +214,7 @@ body{
         margin-left: 10%;
         width: 80%;
     }
+
     .dev2{
         position: absolute;
         grid-column: 2 / 3;
@@ -232,50 +243,6 @@ body{
 }
 
 @media screen and (max-width: 549px) and (min-width: 413px){
-    .menu-container{
-        display: grid;
-        grid-template-columns: 5% 19% 19% 19% 19% 19%;
-        font-family: 'Michroma';
-        list-style-type: none;
-    }
-    
-    .menu-container .inicio{
-        justify-self: end;
-        align-self: center;
-        grid-column-start: 2;
-    }
-    .menu-container .nosotros{
-        justify-self: center;
-        align-self: center;
-        grid-column-start: 3;
-    }
-    .menu-container .proyectos{
-        justify-self: center;
-        align-self: center;
-        grid-column-start: 4;
-    }
-    .menu-container .servicios{
-        margin-left: 10px;
-        justify-self: center;
-        align-self: center;
-        grid-column-start: 5;
-    }
-    .menu-container .contacto{
-        justify-self: center;
-        align-self: center;
-        grid-column-start: 6;
-    }
-
-    .menu-container a{
-        font-size: 8px;
-        font-weight: bold;
-        color: black;
-    }
-
-    .logopag{
-        margin: 5px 0 5px 5px;
-        width: 3em;
-    }
 
     .tiulo-container{
         display: grid;
@@ -283,21 +250,24 @@ body{
         row-gap: 40px;
         transform: translateY(10%);
     }
+
     .titulo__pag{
-        margin: 0;
+        margin: 60px 0 20px 10px;
         grid-row: 1 / 2;
         font-family: 'Electrolize';
         font-size: 50px;
         color: white;
         justify-self: center;
     }
+
     .titulo__subpag{
-        grid-row: 2 / -1;
+        grid-row: 2 / 3;
         font-family: 'Michroma';
         font-size: 15px;
         color: white;
-        margin-top: 10%;
-        
+        margin-top: 5%;
+        width: 50%;
+        justify-self: center;
     }
     
     .footer{
@@ -312,6 +282,7 @@ body{
         grid-column: 1 / 2;
         margin-left: 10%;
     }
+
     .dev2{
         position: absolute;
         grid-column: 2 / 3;
@@ -325,12 +296,14 @@ body{
         align-self: center;
         margin-right: 5%;
     }
+
     #copyright{
         grid-column: 1 / 4;
         justify-self: center;
         align-self: end;
         color: white;
     }
+
     .copyright--uppercase{
         text-transform: uppercase;
         font-size: 10px;
@@ -338,50 +311,6 @@ body{
 }
 
 @media screen and (max-width: 720px) and (min-width: 550px){
-    .menu-container{
-        display: grid;
-        grid-template-columns: 5% 19% 19% 19% 19% 19%;
-        font-family: 'Michroma';
-        list-style-type: none;
-    }
-    
-    .menu-container .inicio{
-        justify-self: end;
-        align-self: center;
-        grid-column-start: 2;
-    }
-    .menu-container .nosotros{
-        justify-self: center;
-        align-self: center;
-        grid-column-start: 3;
-    }
-    .menu-container .proyectos{
-        justify-self: center;
-        align-self: center;
-        grid-column-start: 4;
-    }
-    .menu-container .servicios{
-        margin-left: 12px;
-        justify-self: center;
-        align-self: center;
-        grid-column-start: 5;
-    }
-    .menu-container .contacto{
-        justify-self: center;
-        align-self: center;
-        grid-column-start: 6;
-    }
-
-    .menu-container a{
-        font-size: 10px;
-        font-weight: bold;
-        color: black;
-    }
-
-    .logopag{
-        margin: 5px 0 5px 5px;
-        width: 3em;
-    }
 
     .tiulo-container{
         display: grid;
@@ -389,6 +318,7 @@ body{
         row-gap: 40px;
         transform: translateY(20%);
     }
+
     .titulo__pag{
         margin: 0;
         grid-row: 1 / 2;
@@ -397,6 +327,7 @@ body{
         color: white;
         justify-self: center;
     }
+
     .titulo__subpag{
         grid-row: 2 / -1;
         font-family: 'Michroma';
@@ -407,7 +338,7 @@ body{
     }
     
     .footer{
-        transform: translateY(70%);
+        transform: translateY(50%);
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, auto);
@@ -435,12 +366,14 @@ body{
         align-self: center;
         margin-left: 15px;
     }
+
     #copyright{
         grid-column: 1 / 5;
         justify-self: center;
         align-self: center;
         color: white;
     }
+
     .copyright--uppercase{
         text-transform: uppercase;
         font-size: 10px;
@@ -448,56 +381,12 @@ body{
 }
 
 @media screen and (max-width: 1366px) and (min-width: 721px){
-    .menu-container{
-        display: grid;
-        grid-template-columns: 20% 16% 16% 16% 16% 16%;
-        font-family: 'Michroma';
-        list-style-type: none;
-    }
-    
-    .menu-container .inicio{
-        justify-self: center;
-        align-self: center;
-        grid-column-start: 2;
-    }
-    .menu-container .nosotros{
-        justify-self: center;
-        align-self: center;
-        grid-column-start: 3;
-    }
-    .menu-container .proyectos{
-        justify-self: center;
-        align-self: center;
-        grid-column-start: 4;
-    }
-    .menu-container .servicios{
-        margin-left: 12px;
-        justify-self: center;
-        align-self: center;
-        grid-column-start: 5;
-    }
-    .menu-container .contacto{
-        justify-self: center;
-        align-self: center;
-        grid-column-start: 6;
-    }
-
-    .menu-container a{
-        font-size: 12px;
-        font-weight: bold;
-        color: black;
-    }
-
-    .logopag{
-        margin: 5px 0 5px 5px;
-        width: 3em;
-    }
-
+   
     .tiulo-container{
         display: grid;
         grid-template-rows: 80% 20%;
-        row-gap: 40px;
-        transform: translateY(0%);
+        row-gap: 18px;
+        transform: translateY(10%);
     }
     .titulo__pag{
         grid-row: 1 / 2;
@@ -544,18 +433,21 @@ body{
         align-self: center;
         margin-left: 15px;
     }
+
     #copyright{
         grid-column: 1 / 5;
         justify-self: center;
         align-self: center;
         color: white;
     }
+
     .copyright--uppercase{
         text-transform: uppercase;
         font-size: 10px;
     }
 
 }
+
 
 
 /*------------------------------------NOSOTROS------------------------------------*/
@@ -565,30 +457,32 @@ body{
     grid-template-columns: 50% 50%;
     grid-auto-rows: auto;
 }
-#nosotros__titulo{
+
+.nosotros__titulo{
     margin: 20px;
-    grid-column: 1 / 2;
+    grid-column: 1 / -1;
     font-family: 'Electrolize';
     font-size: 3em;
-    color: rgb(252, 252, 252);
+    color: rgb(0, 0, 0);
 }
+
 .nosotros__p{
     margin-left: 10%;
     grid-row: 2 / 3;
-    color: white;
+    color: black !important;
     font-family: 'Michroma';
     font-size: 20px;
     text-align: justify;
 }
 
 .nosotros__p a{
-    color: white;
+    color: black !important;
     font-style: italic;
     transition: color .8s;
 }
 
 .nosotros__p a:hover{
-    color: gold;
+    color: gold !important;
 }
 
 #logo__container{
@@ -596,33 +490,47 @@ body{
     grid-row: 3 / 5;
 }
 
+#logo__container :hover{
+    transform: rotate(0deg);
+    animation-name: logo-rotate;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+@keyframes logo-rotate{
+    100%{ transform: rotate(360deg); }
+}
+
 #coderlogo{
-    margin-left: 100px;
+    margin-left: 35%;
     width: 30em;
     
 }
+
 .nosotros__titulo2{
-    margin-top: 60px;
+    margin-top: 0px;
     grid-row: 3 / 4;
     font-family: 'Electrolize';
     font-size: 3em;
-    color: rgb(252, 252, 252);
+    color: rgb(0, 0, 0) !important;
 }
+
 .nosotros__p2{
     margin-top: 20px;
     margin-left: 10%;
     grid-column: 1 / 2;
     grid-row: 4 / 5;
     font-family: 'Michroma';
-    font-size: 1.3em;
-    color: white;
+    font-size: 5pxem;
+    color: rgb(0, 0, 0) !important;
     text-align: justify;
 }
+
 .copyright2{
-    margin-top: 6%;
+    margin-top: 3%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
 .copyright--uppercase2{
     grid-column: 2;
     justify-self: center;
@@ -632,18 +540,21 @@ body{
 
 
 @media screen and ( max-width: 412px){
+
     .nosotros2{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, auto);
     }
-    #nosotros__titulo{
-        margin: 10px;
+
+    .nosotros__titulo{
+        margin: 80px 0 10px 10px;
         grid-column: 1 / 2;
         font-family: 'Electrolize';
         font-size: 2em;
-        color: rgb(252, 252, 252);
+        color: rgb(0, 0, 0);
     }
+
     .nosotros__p{
         margin: 5%;
         grid-row: 2 / 3;
@@ -664,23 +575,24 @@ body{
     }
     
     #logo__container{
-        justify-items: center;
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
+        margin-left: -5%;
+        transform: translateY(-10%);
     }
     
     #coderlogo{
         width: 10em;
         
     }
+
     .nosotros__titulo2{
-        margin: 60px 0 0 10px;
+        margin: 0px 0 10px 10px;
         grid-column: 1 / 2;
         grid-row: 4 / 5;
         font-family: 'Electrolize';
         font-size: 2em;
         color: rgb(252, 252, 252);
     }
+
     .nosotros__p2{
         margin: 5%;
         grid-column: 1 / 2;
@@ -690,13 +602,15 @@ body{
         color: white;
         text-align: justify;
     }
+
     .copyright2{
-        margin-top: 6%;
+        margin-top: 0%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
+
     .copyright--uppercase2{
-        margin-top: 10%;
+        margin-top: 0%;
         grid-column: 1 / 4;
         justify-self: center;
         text-transform: uppercase;
@@ -706,19 +620,23 @@ body{
     
 }
 
+
 @media screen and (max-width: 720px) and (min-width: 413px){
+
     .nosotros2{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, auto);
     }
-    #nosotros__titulo{
-        margin: 10px;
+
+    .nosotros__titulo{
+        margin: 70px 0 10px 10px;
         grid-column: 1 / 2;
         font-family: 'Electrolize';
         font-size: 2em;
-        color: rgb(252, 252, 252);
+        color: rgb(0, 0, 0);
     }
+
     .nosotros__p{
         margin: 5%;
         grid-row: 2 / 3;
@@ -739,7 +657,8 @@ body{
     }
     
     #logo__container{
-        margin-right: 14%;
+        transform: translateY(-5%);
+        margin-right: 26%;
         justify-self: center;
         grid-column: 1 / 2;
         grid-row: 3 / 4;
@@ -747,16 +666,19 @@ body{
     
     #coderlogo{
         width: 18em;
+        justify-self: center;
         
     }
+
     .nosotros__titulo2{
-        margin: 60px 0 0 10px;
+        margin: 0px 0 10px 10px;
         grid-column: 1 / 2;
         grid-row: 4 / 5;
         font-family: 'Electrolize';
         font-size: 2em;
         color: rgb(252, 252, 252);
     }
+
     .nosotros__p2{
         margin: 5%;
         grid-column: 1 / 2;
@@ -766,13 +688,15 @@ body{
         color: white;
         text-align: justify;
     }
+
     .copyright2{
         margin-top: 6%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
+
     .copyright--uppercase2{
-        margin-top: 10%;
+        margin-top: 0%;
         grid-column: 1 / 4;
         justify-self: center;
         text-transform: uppercase;
@@ -783,11 +707,13 @@ body{
 }
 
 @media screen and (max-width: 1366px) and (min-width: 721px){
+
     .nosotros2{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, auto);
     }
+
     #nosotros__titulo{
         margin: 10px;
         grid-column: 1 / 2;
@@ -795,6 +721,7 @@ body{
         font-size: 2.5em;
         color: rgb(252, 252, 252);
     }
+
     .nosotros__p{
         margin: 2% 5% 0 5%;
         grid-row: 2 / 3;
@@ -825,6 +752,7 @@ body{
         width: 25em;
         
     }
+
     .nosotros__titulo2{
         margin: 60px 0 0 10px;
         grid-column: 1 / 2;
@@ -833,6 +761,7 @@ body{
         font-size: 2.5em;
         color: rgb(252, 252, 252);
     }
+
     .nosotros__p2{
         margin: 5%;
         grid-column: 1 / 2;
@@ -842,11 +771,13 @@ body{
         color: white;
         text-align: justify;
     }
+
     .copyright2{
         margin-top: 6%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
+
     .copyright--uppercase2{
         margin-top: 10%;
         grid-column: 1 / 4;
@@ -856,9 +787,6 @@ body{
         font-size: 10px;
     }
 }
-
-
-
 
 
 /*-------------------------------------PROYECTOS--------------------*/
@@ -872,8 +800,9 @@ body{
     grid-column: 1 / 2;
     font-family: 'Electrolize';
     color: white;
+    transform: translateY(60%);
     font-size: 3em;
-    margin: 80px 0 0 20px;
+    margin: 80px 0 50px 20px;
     padding: 0;
 }
 
@@ -887,21 +816,32 @@ body{
     align-content: stretch;
     justify-content: center;
 }
+
 .container-img__plantillas{
+    opacity: 100;
     margin: 20px;
     padding: 10px;
     border: 2px;
     border-style: solid;
     border-color: white;
     border-radius: 25px;
+    animation-name: opacity;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+}
+@keyframes opacity{
+    0%{ opacity: 00;}
 }
 
-
 .trabajos-titulo{
-    grid-row: 3 / 4;
+    grid-column: 1 / 2;
     font-family: 'Electrolize';
     color: white;
+    transform: translateY(60%);
     font-size: 3em;
+    margin: 80px 0 50px 20px;
+    padding: 0;
 }
 
 #container-2-img{
@@ -922,6 +862,13 @@ body{
     border-style: solid;
     border-color: white;
     border-radius: 25px;
+    animation-name: opacity;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+}
+@keyframes opacity{
+    0%{ opacity: 00;}
 }
 
 @media screen and ( max-width: 412px){
@@ -929,13 +876,14 @@ body{
     #container-proyectos{
     display: grid;
     grid-auto-rows: auto;
-}
+    }
+
     .titulo-in{
         grid-column: 1 / 2;
         font-family: 'Electrolize';
         color: white;
         font-size: 2em;
-        margin: 60px 0 0 20px;
+        margin: 70px 0 20px 10px !important;
         padding: 0;
     }
 
@@ -957,7 +905,7 @@ body{
         grid-row: 3 / 4;
         font-family: 'Electrolize';
         color: white;
-        margin: 60px 0 0 20px;
+        margin: 40px 0 20px 10px;
         font-size: 2em;
     }
     
@@ -981,6 +929,10 @@ body{
         border-color: white;
         border-radius: 25px;
     }
+
+    .footer2{
+        margin-top: 20%;
+    }
 }
 
 @media screen and (max-width: 720px) and (min-width: 413px){
@@ -994,8 +946,9 @@ body{
         font-family: 'Electrolize';
         color: white;
         font-size: 2em;
-        margin: 60px 0 0 20px;
+        margin: 90px 0 40px 20px;
         padding: 0;
+        width: 90%;
     }
 
     .container-img{
@@ -1016,7 +969,7 @@ body{
         grid-row: 3 / 4;
         font-family: 'Electrolize';
         color: white;
-        margin: 60px 0 0 20px;
+        margin: 50px 0 40px 20px;
         font-size: 2em;
     }
     
@@ -1049,20 +1002,31 @@ body{
         font-family: 'Electrolize';
         color: white;
         font-size: 2.6em;
-        margin: 60px 0 0 20px;
+        margin: 70px 0 60px 20px;
         padding: 0;
     }
+
     .trabajos-titulo{
         grid-row: 3 / 4;
         font-family: 'Electrolize';
         color: white;
-        margin: 60px 0 0 20px;
-        font-size: 2em;
+        margin: 70px 0 40px 20px;
+        font-size: 2.6em;
+    }
+
+    .footer2{
+        transform: translateY(-60%) !important;
     }
 }
 
 
 /*---------------------------------SERVICIOS----------------------*/
+
+.card{
+    transform: translateY(80%);
+    margin-left: 10%;
+}
+
 .container-tarjetas{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -1076,7 +1040,6 @@ body{
     font-size: 3em;
     color: rgb(252, 252, 252);
 }
-
 
 #titulo-center{
     grid-column: 2 / 3;
@@ -1128,11 +1091,6 @@ body{
     align-items: center;
     font-size: 35px;
 }
-
-
-
-
-
 
 #titulo-center2{
     grid-column: 2 / 3;
@@ -1190,6 +1148,7 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
 .copyright--uppercase3{
     margin: 5% 0 2% 0;
     grid-column: 2;
@@ -1201,52 +1160,6 @@ body{
 
 
 @media screen and ( max-width: 412px){
-
-    .menu-container{
-        display: grid;
-        grid-template-columns: 5% 19% 19% 19% 19% 19%;
-        font-family: 'Michroma';
-        list-style-type: none;
-    }
-    
-    .menu-container .inicio{
-        justify-self: end;
-        align-self: start;
-        grid-column-start: 2;
-    }
-    .menu-container .nosotros{
-        justify-self: center;
-        align-self: start;
-        grid-column-start: 3;
-    }
-    .menu-container .proyectos{
-        justify-self: center;
-        align-self: start;
-        grid-column-start: 4;
-    }
-    .menu-container .servicios{
-        margin-left: 10px;
-        justify-self: center;
-        align-self: start;
-        grid-column-start: 5;
-    }
-    .menu-container .contacto{
-        justify-self: center;
-        align-self: start;
-        grid-column-start: 6;
-    }
-
-    .menu-container a{
-        font-size: 5px;
-        font-weight: bold;
-        color: black;
-    }
-
-    .logopag{
-        margin: 5px 0 5px 5px;
-        width: 3em;
-    }
-
     
     .container-tarjetas{
         display: grid;
@@ -1255,7 +1168,7 @@ body{
     }
 
     #services{
-        margin: 40px 0 0 20px;
+        margin: 100px 0 40px 20px;
         grid-column: 1 / 2;
         font-family: 'Electrolize';
         font-size: 2em;
@@ -1369,19 +1282,6 @@ body{
 
 @media screen and (max-width: 720px) and (min-width: 413px){
 
-    .menu-container{
-        display: grid;
-        grid-template-columns: 5% 19% 19% 19% 19% 19%;
-        font-family: 'Michroma';
-        list-style-type: none;
-    }
-
-    .menu-container a{
-        font-size: 10px;
-        font-weight: bold;
-        color: black;
-    }
-
     .container-tarjetas{
         display: grid;
         grid-template-columns: 1fr;
@@ -1389,7 +1289,7 @@ body{
     }
 
     #services{
-        margin: 50px 0 0 20px;
+        margin: 100px 0 25px 20px;
         grid-column: 1 / 2;
         font-family: 'Electrolize';
         font-size: 2em;
@@ -1425,8 +1325,7 @@ body{
         border-color: white;
         transition: background-color .8s;
     }
-    
-    
+        
     .tarjeta1 ul li{
         font-family: 'Michroma';
         display: flex;
@@ -1462,6 +1361,7 @@ body{
     #tarjeta2__lista2{
         grid-column: 1 / 2;
         grid-row: 6 / 7;
+        padding: auto;
     }
     
     .tarjeta2{
@@ -1492,8 +1392,7 @@ body{
         align-items: center;
         font-size: 20px;
         padding: 5%;
-    }
-    
+    }    
 
     .copyright--uppercase3{
         grid-column: 1 / -1;
@@ -1546,8 +1445,7 @@ body{
         border-color: white;
         transition: background-color .8s;
     }
-    
-    
+        
     .tarjeta1 ul li{
         font-family: 'Michroma';
         display: flex;
@@ -1615,7 +1513,6 @@ body{
         padding: 5%;
     }
     
-
     .copyright--uppercase3{
         grid-column: 1 / -1;
         text-align: center;
@@ -1632,164 +1529,28 @@ body{
     color: rgb(255, 255, 255);
     font-size: 3em;
     margin-left: 20px;
-
 }
 
-
-
-#form-container{
-    margin-top: 6%;
-    margin-left: 3%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: auto;
+.container{
+    transform: translateY(15%);
 }
 
-
-
-.formulario-contacto__nombre{
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    font-family: 'Michroma';
+.col-2{
     color: white;
 }
-#nombre[type=text] {
-    font-family: 'Michroma';
-    width: 44.5%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 100px;
+
+.col-22{
+    margin-left: 15px;
 }
 
-
-
-.formulario-contacto__apellido{
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    font-family: 'Michroma';
+.col-form-label{
     color: white;
 }
-#apellido[type=text] {
-    font-family: 'Michroma';
-    width: 45%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 100px;
-}
 
-
-
-.formulario-contacto__telefono{
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-    font-family: 'Michroma';
+.form-check-label{
     color: white;
+    margin: 8px 0 20px 0;
 }
-#telefono[type=number]{
-    font-family: 'Michroma';
-    width: 31.9%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 100px;
-}
-
-
-
-.formulario-contacto__fecha-nacimiento{
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-    font-family: 'Michroma';
-    color: white;
-}
-#date[type=date]{
-    font-family: 'Michroma';
-    width: 30.2%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 100px;
-}
-
-
-
-.formulario-contacto__email{
-    grid-column: 1 / 2;
-    grid-row: 5 / 6;
-    font-family: 'Michroma';
-    color: white;
-}
-#email[type=text]{
-    font-family: 'Michroma';
-    width: 33%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 100px;
-}
-
-
-
-.titulo-dejanos{
-    grid-column: 1 / 2;
-    grid-row: 6 / 7;
-    font-family: 'Michroma';
-    font-size: 20px;
-    color: white;
-    margin-top: 35px;
-}
-.dejar-mensaje{
-    grid-column: 1 / 2;
-    grid-row: 7 / 8;
-    width: 100%;
-}
-#dejar-mensaje__area{
-    margin-top: 2%;
-    margin-left: 4%;
-    width: 50%;
-    height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    resize: none;
-}
-
-
-
-.enviar[type=button], [type=submit]{
-    margin-top: 2%;
-    margin-left: 5%;
-    font-family: 'Electrolize';
-    font-size: 15px;
-    font-weight: bold;
-    border: none;
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
-    padding: 10px 28px;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 20px;
-}
-.enviar{
-    grid-column: 1 / 2;
-    grid-row: 8 / 9;
-    font-family: 'Michroma';
-    font-size: 13px;
-    color: white;
-    margin-top: 2%;
-    margin-left: 25px;
-}
-
-
 
 .titulo-aprende{
     grid-column: 2 / 3;
@@ -1799,353 +1560,198 @@ body{
     color: white;
 }
 
-.container-select{
-    position: relative;
-    top: 50%;
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    width: 80%;
-}
-#select[id=select]{
-    font-family: 'Michroma';
-    width: 35%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 100px;
-}
-
-
-
 .lineasdecontacto{
-    display: inline;
-    position: absolute;
-    left: 51.5%;
-    bottom: 61.5%;
-    width: 40%;
+    transform: translateY(80%);
 }
+
 .lineasdecontacto__tel{
     font-family: 'Michroma';
     color: white;
-    position: absolute;
-    top: 15%;
-    left: 4%;
+    transform: translateY(-150%);
+    margin-left: 50px;
 }
-.mail{
-    position: absolute;
-    top: 4.8em;
-    left: 0;
-}
+
 .lineasdecontacto__mail{
     font-family: 'Michroma';
     color: white;
-    position: absolute;
-    left: 2.5em;
-    top: 5.2em;
+    transform: translateY(-170%);
+    margin-left: 50px;
 }
-.street{
-    position: absolute;
-    left: 0;
-    top: 9.5em;
-}
+
 .lineasdecontacto__street1{
     font-family: 'Michroma';
     color: white;
-    position: absolute;
-    left: 5%;
-    top: 9em;
+    transform: translateY(-170%);
+    margin-left: 50px;
 }
+
 .lineasdecontacto__street2{
     font-family: 'Michroma';
     color: white;
-    position: absolute;
-    left: 5%;
-    top: 10.5em;
+    transform: translateY(-170%);
+    margin-left: 50px;
 }
+
 .lineasdecontacto__street3{
     font-family: 'Michroma';
     color: white;
-    position: absolute;
-    left: 5%;
-    top: 11.9em;
+    transform: translateY(-170%);
+    margin-left: 50px;
 }
-
-
 
 .google-maps{
-    position: absolute;
-    left: 51.5%;
-    bottom: 10%;
+    transform: translateY(-25%);
+    margin-left: 50%;
 }
 
-
-
 .footer-contact{
+    transform: translateY(-20%);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
+
 #copyright4{
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     align-self: end;
     justify-self: center;
 }
+
 .copyright--uppercase4{
     text-transform: uppercase;
     color: white;
 }
+
 #redes2{
     margin-top: 10px;
     grid-column: 3 / 4;
-    justify-self: end;
+    justify-self: center;
 }
 
-@media screen and ( max-width: 412px){
-
-    .menu-container{
-        display: grid;
-        grid-template-columns: 5% 19% 19% 19% 19% 19%;
-        font-family: 'Michroma';
-        list-style-type: none;
-    }
-
-    #unique{
-        position: fixed;
-        width: 100%;
-        z-index: 10;
-    }
+@media screen and (max-width: 720px){
 
     .titulo-contacto{
-        transform: translateY(38px);
+        transform: translateY(300%);
         font-family: 'Electrolize';
         color: rgb(255, 255, 255);
         font-size: 2em;
         margin-left: 20px;
-    
-    }
-    
-    
-    
-    #form-container{
-        margin-top: 18%;
-        margin-left: 3%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto;
     }
 
-    .formulario-contacto__nombre{
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-        font-size: 15px;
-        font-family: 'Michroma';
-        color: white;
-    }
-    #nombre[type=text] {
-        font-size: 10px;
-        font-family: 'Michroma';
-        width: 77%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border: 2px solid rgb(0, 0, 0);
-        border-radius: 100px;
-    }
 
-    .formulario-contacto__apellido{
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-        font-size: 15px;
-        font-family: 'Michroma';
-        color: white;
-    }
-    #apellido[type=text] {
-        font-size: 10px;
-        font-family: 'Michroma';
-        width: 78%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border: 2px solid rgb(0, 0, 0);
-        border-radius: 100px;
-    }
-    
-    
-    
-    .formulario-contacto__telefono{
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
-        font-size: 15px;
-        font-family: 'Michroma';
-        color: white;
-    }
-    #telefono[type=number]{
-        font-size: 10px;
-        font-family: 'Michroma';
-        width: 47%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border: 2px solid rgb(0, 0, 0);
-        border-radius: 100px;
-    }
-    
-    
-    
-    .formulario-contacto__fecha-nacimiento{
-        grid-column: 1 / 2;
-        grid-row: 4 / 5;
-        font-size: 15px;
-        font-family: 'Michroma';
-        color: white;
-    }
-    #date[type=date]{
-        font-size: 10px;
-        font-family: 'Michroma';
-        width: 43%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border: 2px solid rgb(0, 0, 0);
-        border-radius: 100px;
-    }
-    
-    
-    
-    .formulario-contacto__email{
-        grid-column: 1 / 2;
-        grid-row: 5 / 6;
-        font-size: 15px;
-        font-family: 'Michroma';
-        color: white;
-    }
-    #email[type=text]{
-        font-size: 10px;
-        font-family: 'Michroma';
-        width: 50%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border: 2px solid rgb(0, 0, 0);
-        border-radius: 100px;
-    }
-
-    .titulo-dejanos{
-        grid-column: 1 / 2;
-        grid-row: 6 / 7;
-        font-family: 'Michroma';
-        font-size: 15px;
-        color: white;
-        margin-top: 35px;
-    }
-    .dejar-mensaje{
-        grid-column: 1 / 2;
-        grid-row: 7 / 8;
-        width: 100%;
-    }
-    #dejar-mensaje__area{
-        margin-top: 2%;
-        margin-left: 4%;
-        width: 90%;
-        height: 150px;
-        padding: 12px 20px;
-        box-sizing: border-box;
-        border: 2px solid rgb(0, 0, 0);
-        border-radius: 4px;
-        background-color: #f8f8f8;
-        resize: none;
-    }
-    
     .titulo-aprende{
-        margin-top: 10%;
-        grid-column: 1 / 2;
-        grid-row: 9 / 10;
-        font-family: 'Michroma';
-        font-size: 15px;
-        color: white;
+        font-size: medium;
     }
-    
-    .container-select{
-        grid-column: 1 / 2;
-        grid-row: 10 / 11;
-        width: 80%;
-    }
-    #select[id=select]{
-        font-size: 10px;
-        font-family: 'Michroma';
-        width: 70%;
-        padding: 12px 20px;
-        margin: 0px 0;
-        box-sizing: border-box;
-        border: 2px solid rgb(0, 0, 0);
-        border-radius: 100px;
-    }
-
     .lineasdecontacto{
-        position: absolute;
-        left: 5%;
-        top: 145%;
-        width: 100%;
+        transform: translateY(60%);
     }
     .lineasdecontacto__tel{
-        font-size: 10px;
+        font-size: 15px;
         font-family: 'Michroma';
         color: white;
-        position: absolute;
-        margin-top: 5%;
-        left: 10%;
-    }
-    .mail{
-        position: absolute;
-        top: 4.8em;
-        left: 0;
     }
     .lineasdecontacto__mail{
-        font-size: 13px;
+        font-size: 15px;
         font-family: 'Michroma';
         color: white;
-        position: absolute;
-        left: 4em;
-        top: 6.8em;
-    }
-    .street{
-        position: absolute;
-        left: 0;
-        top: 9.5em;
     }
     .lineasdecontacto__street1{
+        font-size: 15px;
         font-family: 'Michroma';
         color: white;
-        position: absolute;
-        left: 3em;
-        top: 9em;
     }
     .lineasdecontacto__street2{
+        font-size: 15px;
         font-family: 'Michroma';
         color: white;
-        position: absolute;
-        left: 3em;
-        top: 10.5em;
     }
     .lineasdecontacto__street3{
+        font-size: 15px;
         font-family: 'Michroma';
         color: white;
-        position: absolute;
-        left: 3em;
-        top: 11.9em;
     }
 
     .google-maps{
-        position: absolute;
-        left: 0%;
-        top: 170%;
+        transform: translateY(55%);
+        margin-left: 2.5px;
     }
 
     .footer-contact{
         margin-left: 15px;
-        transform: translateY(640%);
+        transform: translateY(180%);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    #copyright4{
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        align-self: center;
+        justify-self: center;
+    }
+    .copyright--uppercase4{
+        text-transform: uppercase;
+        color: white;
+    }
+    #redes2{
+        margin-top: 10px;
+        grid-column: 1 / 4;
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 1366px) and (min-width: 991px){
+    
+    .titulo-contacto{
+        transform: translateY(300%);
+        font-family: 'Electrolize';
+        color: rgb(255, 255, 255);
+        font-size: 2em;
+        margin-left: 20px;
+    }
+
+
+    .titulo-aprende{
+        font-size: medium;
+    }
+    .lineasdecontacto{
+        transform: translateY(60%);
+    }
+    .lineasdecontacto__tel{
+        font-size: 15px;
+        font-family: 'Michroma';
+        color: white;
+    }
+    .lineasdecontacto__mail{
+        font-size: 15px;
+        font-family: 'Michroma';
+        color: white;
+    }
+    .lineasdecontacto__street1{
+        font-size: 15px;
+        font-family: 'Michroma';
+        color: white;
+    }
+    .lineasdecontacto__street2{
+        font-size: 15px;
+        font-family: 'Michroma';
+        color: white;
+    }
+    .lineasdecontacto__street3{
+        font-size: 15px;
+        font-family: 'Michroma';
+        color: white;
+    }
+
+    .google-maps{
+        transform: translateY(-45%);
+        margin-left: 58%;
+    }
+
+    .footer-contact{
+        margin-left: 15px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -2168,521 +1774,58 @@ body{
     }
 }
 
-@media screen and (max-width: 720px) and (min-width: 413px){
-
-        #unique{
-            position: fixed;
-            width: 100%;
-            z-index: 10;
-        }
+@media screen and (max-width: 413px){
     
-        .titulo-contacto{
-            transform: translateY(38px);
-            font-family: 'Electrolize';
-            color: rgb(255, 255, 255);
-            font-size: 2em;
-            margin-left: 20px;
-        
-        }
-        
-        
-        
-        #form-container{
-            margin-top: 18%;
-            margin-left: 3%;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-auto-rows: auto;
-        }
-    
-        .formulario-contacto__nombre{
-            grid-column: 1 / 2;
-            grid-row: 1 / 2;
-            font-size: 15px;
-            font-family: 'Michroma';
-            color: white;
-        }
-        #nombre[type=text] {
-            font-size: 10px;
-            font-family: 'Michroma';
-            width: 77%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 100px;
-        }
-    
-        .formulario-contacto__apellido{
-            grid-column: 1 / 2;
-            grid-row: 2 / 3;
-            font-size: 15px;
-            font-family: 'Michroma';
-            color: white;
-        }
-        #apellido[type=text] {
-            font-size: 10px;
-            font-family: 'Michroma';
-            width: 78%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 100px;
-        }
-        
-        
-        
-        .formulario-contacto__telefono{
-            grid-column: 1 / 2;
-            grid-row: 3 / 4;
-            font-size: 15px;
-            font-family: 'Michroma';
-            color: white;
-        }
-        #telefono[type=number]{
-            font-size: 10px;
-            font-family: 'Michroma';
-            width: 47%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 100px;
-        }
-        
-        
-        
-        .formulario-contacto__fecha-nacimiento{
-            grid-column: 1 / 2;
-            grid-row: 4 / 5;
-            font-size: 15px;
-            font-family: 'Michroma';
-            color: white;
-        }
-        #date[type=date]{
-            font-size: 10px;
-            font-family: 'Michroma';
-            width: 43%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 100px;
-        }
-        
-        
-        
-        .formulario-contacto__email{
-            grid-column: 1 / 2;
-            grid-row: 5 / 6;
-            font-size: 15px;
-            font-family: 'Michroma';
-            color: white;
-        }
-        #email[type=text]{
-            font-size: 10px;
-            font-family: 'Michroma';
-            width: 50%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 100px;
-        }
-    
-        .titulo-dejanos{
-            grid-column: 1 / 2;
-            grid-row: 6 / 7;
-            font-family: 'Michroma';
-            font-size: 15px;
-            color: white;
-            margin-top: 35px;
-        }
-        .dejar-mensaje{
-            grid-column: 1 / 2;
-            grid-row: 7 / 8;
-            width: 100%;
-        }
-        #dejar-mensaje__area{
-            margin-top: 2%;
-            margin-left: 4%;
-            width: 90%;
-            height: 150px;
-            padding: 12px 20px;
-            box-sizing: border-box;
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 4px;
-            background-color: #f8f8f8;
-            resize: none;
-        }
-        
-        .titulo-aprende{
-            margin-top: 10%;
-            grid-column: 1 / 2;
-            grid-row: 9 / 10;
-            font-family: 'Michroma';
-            font-size: 15px;
-            color: white;
-        }
-        
-        .container-select{
-            grid-column: 1 / 2;
-            grid-row: 10 / 11;
-            width: 80%;
-        }
-        #select[id=select]{
-            font-size: 10px;
-            font-family: 'Michroma';
-            width: 70%;
-            padding: 12px 20px;
-            margin: 0px 0;
-            box-sizing: border-box;
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 100px;
-        }
-    
-        .lineasdecontacto{
-            position: absolute;
-            left: 5%;
-            top: 135%;
-            width: 100%;
-        }
-        .lineasdecontacto__tel{
-            font-size: 10px;
-            font-family: 'Michroma';
-            color: white;
-            position: absolute;
-            margin-top: 5%;
-            left: 10%;
-        }
-        .mail{
-            position: absolute;
-            top: 4.8em;
-            left: 0;
-        }
-        .lineasdecontacto__mail{
-            font-size: 13px;
-            font-family: 'Michroma';
-            color: white;
-            position: absolute;
-            left: 4em;
-            top: 6.8em;
-        }
-        .street{
-            position: absolute;
-            left: 0;
-            top: 9.5em;
-        }
-        .lineasdecontacto__street1{
-            font-family: 'Michroma';
-            color: white;
-            position: absolute;
-            left: 3em;
-            top: 9em;
-        }
-        .lineasdecontacto__street2{
-            font-family: 'Michroma';
-            color: white;
-            position: absolute;
-            left: 3em;
-            top: 10.5em;
-        }
-        .lineasdecontacto__street3{
-            font-family: 'Michroma';
-            color: white;
-            position: absolute;
-            left: 3em;
-            top: 11.9em;
-        }
-    
-        .google-maps{
-            position: absolute;
-            left: 0%;
-            top: 170%;
-        }
-    
-        .footer-contact{
-            margin-left: 15px;
-            transform: translateY(640%);
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-        }
-        
-        #copyright4{
-            grid-column: 1 / 4;
-            grid-row: 2 / 3;
-            align-self: center;
-            justify-self: center;
-        }
-        .copyright--uppercase4{
-            text-transform: uppercase;
-            color: white;
-        }
-        #redes2{
-            margin-top: 10px;
-            grid-column: 1 / 4;
-            justify-self: center;
-        }
+    .google-maps{
+        transform: translateY(55%);
+        margin-left: 0.5%;
+    }
+    .copyright--uppercase4{
+        font-size: 10px;
+    }
+    .lineasdecontacto__mail{
+        font-size: 14px;
+    }
 }
 
-@media screen and (max-width: 1366px) and (min-width: 721px){
+@media screen and (max-width: 625px) and (min-width: 414px){
     
-        #unique{
-            position: fixed;
-            width: 100%;
-            z-index: 10;
-        }
+    .google-maps{
+        transform: translateY(55%);
+        margin-left: 10%;
+    }
+    .copyright--uppercase4{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 720px) and (min-width: 626px){
     
-        .titulo-contacto{
-            transform: translateY(55px);
-            font-family: 'Electrolize';
-            color: rgb(255, 255, 255);
-            font-size: 2em;
-            margin-left: 20px;
-        
-        }
-        
-        
-        
-        #form-container{
-            margin-top: 10%;
-            margin-left: 3%;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-auto-rows: auto;
-        }
+    .google-maps{
+        transform: translateY(55%);
+        margin-left: 25%;
+    }
+}
+
+@media screen and (max-width: 990px) and (min-width: 721px){
+
+    .google-maps{
+        transform: translateY(75%);
+        margin-left: 25%;
+    }
     
-        .formulario-contacto__nombre{
-            grid-column: 1 / 2;
-            grid-row: 1 / 2;
-            font-size: 15px;
-            font-family: 'Michroma';
-            color: white;
-        }
-        #nombre[type=text] {
-            font-size: 10px;
-            font-family: 'Michroma';
-            width: 76.3%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 100px;
-        }
-    
-        .formulario-contacto__apellido{
-            grid-column: 1 / 2;
-            grid-row: 2 / 3;
-            font-size: 15px;
-            font-family: 'Michroma';
-            color: white;
-        }
-        #apellido[type=text] {
-            font-size: 10px;
-            font-family: 'Michroma';
-            width: 77%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 100px;
-        }
-        
-        
-        
-        .formulario-contacto__telefono{
-            grid-column: 1 / 2;
-            grid-row: 3 / 4;
-            font-size: 15px;
-            font-family: 'Michroma';
-            color: white;
-        }
-        #telefono[type=number]{
-            font-size: 10px;
-            font-family: 'Michroma';
-            width: 62.8%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 100px;
-        }
-        
-        
-        
-        .formulario-contacto__fecha-nacimiento{
-            grid-column: 1 / 2;
-            grid-row: 4 / 5;
-            font-size: 15px;
-            font-family: 'Michroma';
-            color: white;
-        }
-        #date[type=date]{
-            font-size: 10px;
-            font-family: 'Michroma';
-            width: 61%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 100px;
-        }
-        
-        
-        
-        .formulario-contacto__email{
-            grid-column: 1 / 2;
-            grid-row: 5 / 6;
-            font-size: 15px;
-            font-family: 'Michroma';
-            color: white;
-        }
-        #email[type=text]{
-            font-size: 10px;
-            font-family: 'Michroma';
-            width: 64%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 100px;
-        }
-    
-        .titulo-dejanos{
-            grid-column: 1 / 2;
-            grid-row: 6 / 7;
-            font-family: 'Michroma';
-            font-size: 15px;
-            color: white;
-            margin-top: 35px;
-        }
-        .dejar-mensaje{
-            grid-column: 1 / 2;
-            grid-row: 7 / 8;
-            width: 100%;
-        }
-        #dejar-mensaje__area{
-            margin-top: 2%;
-            margin-left: 4%;
-            width: 82.6%;
-            height: 150px;
-            padding: 12px 20px;
-            box-sizing: border-box;
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 4px;
-            background-color: #f8f8f8;
-            resize: none;
-        }
-        
-        .titulo-aprende{
-            margin-top: 10%;
-            grid-column: 1 / 2;
-            grid-row: 9 / 10;
-            font-family: 'Michroma';
-            font-size: 15px;
-            color: white;
-        }
-        
-        .container-select{
-            grid-column: 1 / 2;
-            grid-row: 10 / 11;
-            width: 80%;
-        }
-        #select[id=select]{
-            font-size: 10px;
-            font-family: 'Michroma';
-            width: 70%;
-            padding: 12px 20px;
-            margin: 0px 0;
-            box-sizing: border-box;
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 100px;
-        }
-    
-        .lineasdecontacto{
-            position: absolute;
-            left: 5%;
-            top: 85%;
-            width: 100%;
-        }
-        .lineasdecontacto__tel{
-            font-size: 10px;
-            font-family: 'Michroma';
-            color: white;
-            position: absolute;
-            margin-top: 2%;
-            left: 5%;
-        }
-        .mail{
-            position: absolute;
-            top: 4.8em;
-            left: 0;
-        }
-        .lineasdecontacto__mail{
-            font-size: 13px;
-            font-family: 'Michroma';
-            color: white;
-            position: absolute;
-            left: 4em;
-            top: 6.8em;
-        }
-        .street{
-            position: absolute;
-            left: 0;
-            top: 9.5em;
-        }
-        .lineasdecontacto__street1{
-            font-family: 'Michroma';
-            color: white;
-            position: absolute;
-            left: 3em;
-            top: 9em;
-        }
-        .lineasdecontacto__street2{
-            font-family: 'Michroma';
-            color: white;
-            position: absolute;
-            left: 3em;
-            top: 10.5em;
-        }
-        .lineasdecontacto__street3{
-            font-family: 'Michroma';
-            color: white;
-            position: absolute;
-            left: 3em;
-            top: 11.9em;
-        }
-    
-        .google-maps{
-            position: absolute;
-            left: 0%;
-            top: 105%;
-            margin-left: 80px;
-        }
-    
-        .footer-contact{
-            margin-left: 15px;
-            transform: translateY(640%);
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-        }
-        
-        #copyright4{
-            grid-column: 1 / 4;
-            grid-row: 2 / 3;
-            align-self: center;
-            justify-self: center;
-        }
-        .copyright--uppercase4{
-            text-transform: uppercase;
-            color: white;
-        }
-        #redes2{
-            margin-top: 10px;
-            grid-column: 1 / 4;
-            justify-self: center;
-        }
+    .footer-contact{
+        transform: translateY(250%);
+    }
+    #copyright4{
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        align-self: center;
+        justify-self: center;
+    }
+    #redes2{
+        margin-top: 10px;
+        grid-column: 2 / 3;
+        justify-self: center;
+    }
 }
