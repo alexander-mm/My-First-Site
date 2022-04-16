@@ -1,0 +1,118 @@
+//INICIO
+
+.footer{
+    transform: translateY(36%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.dev1{
+    grid-column: 1 / 2;
+    margin-left: 20%;
+}
+
+.dev2{
+    position: absolute;
+    grid-column: 1 / 2;
+    justify-self: center;
+}
+
+#redes{
+    grid-column: 3 / 4;
+    justify-self: end;
+    align-self: end;
+    margin-right: 5%;
+}
+
+#copyright{
+    grid-column: 2 / 3;
+    justify-self: center;
+    align-self: end;
+    color: white;
+}
+
+.copyright--uppercase{
+    text-transform: uppercase;
+    font-size: $font-l;
+}
+
+
+
+//NOSOTROS
+
+
+.copyright2{
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.copyright--uppercase2{
+    margin: 0 0 3% 0;
+    grid-column: 2 / 3;
+    justify-self: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: $font-l;
+}
+
+
+
+//PROYECTOS
+
+.footer2{
+    transform: translateY(300%);
+}
+
+.copyright--uppercase2{
+    font-size: $font-l;
+}
+
+
+
+//SERVICIOS
+
+.copyright3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.copyright--uppercase3{
+    margin: 5% 0 2% 0;
+    grid-column: 2;
+    align-self: center;
+    justify-self: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: $font-l;
+}
+
+
+
+//CONTACTO
+.footer-contact{
+    transform: translateY(-20%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#copyright4{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-self: end;
+    justify-self: center;
+}
+
+.copyright--uppercase4{
+    text-transform: uppercase;
+    color: white;
+    font-size: $font-l;
+}
+
+#redes2{
+    margin-top: 10px;
+    grid-column: 3 / 4;
+    justify-self: center;
+}

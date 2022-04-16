@@ -1,50 +1,3 @@
-* {
-  text-decoration: none !important;
-  margin: 0;
-  padding: 0; }
-
-/*===================VARS=================*/
-/*========================================*/
-body {
-  background-color: black; }
-
-.tiulo-container {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  align-items: center;
-  transform: translateY(100px); }
-
-.titulo__pag {
-  grid-row: 1 / 2;
-  font-family: "Electrolize";
-  font-size: 120px;
-  color: white;
-  margin-top: 11%;
-  margin-left: 5%;
-  width: 95%;
-  animation-name: move-right;
-  animation-duration: 3s;
-  animation-delay: 0s; }
-
-@keyframes move-right {
-  0% {
-    margin-left: 100%; } }
-
-.titulo__subpag {
-  grid-row: 2 / -1;
-  font-family: "Michroma";
-  font-size: 34px;
-  color: white;
-  margin-left: 45%;
-  margin-bottom: 10%;
-  animation-name: move-left;
-  animation-duration: 3s;
-  animation-delay: 0s; }
-
-@keyframes move-left {
-  0% {
-    margin-left: 0%; } }
-
 .footer {
   transform: translateY(36%);
   display: grid;
@@ -76,6 +29,350 @@ body {
   text-transform: uppercase;
   font-size: 13px; }
 
+.copyright2 {
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+
+.copyright--uppercase2 {
+  margin: 0 0 3% 0;
+  grid-column: 2 / 3;
+  justify-self: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 13px; }
+
+.footer2 {
+  transform: translateY(300%); }
+
+.copyright--uppercase2 {
+  font-size: 13px; }
+
+.copyright3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+
+.copyright--uppercase3 {
+  margin: 5% 0 2% 0;
+  grid-column: 2;
+  align-self: center;
+  justify-self: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 13px; }
+
+.footer-contact {
+  transform: translateY(-20%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; }
+
+#copyright4 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  align-self: end;
+  justify-self: center; }
+
+.copyright--uppercase4 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 13px; }
+
+#redes2 {
+  margin-top: 10px;
+  grid-column: 3 / 4;
+  justify-self: center; }
+
+.texto-bar {
+  font-family: "Michroma" !important;
+  font-size: 13px; }
+
+.tiulo-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  transform: translateY(100px); }
+
+.titulo__pag {
+  grid-row: 1 / 2;
+  font-family: "Electrolize";
+  font-size: 120px;
+  color: white;
+  margin-top: 11%;
+  margin-left: 5%;
+  width: 95%;
+  animation-name: aparecer;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0%; }
+  50% {
+    opacity: 100%; }
+  100% {
+    opacity: 0%; } }
+
+.titulo__subpag {
+  grid-row: 2 / -1;
+  font-family: "Michroma";
+  font-size: 34px;
+  color: white;
+  margin-left: 45%;
+  margin-bottom: 10%;
+  animation-name: aparecer;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0%; }
+  50% {
+    opacity: 100%; }
+  100% {
+    opacity: 0%; } }
+
+.nosotros__titulo {
+  margin: 20px;
+  font-family: "Electrolize";
+  font-size: 3em;
+  color: white; }
+
+.nosotros__p {
+  margin: 20px 10% 0 10%;
+  color: white !important;
+  font-family: "Michroma";
+  font-size: 20px;
+  text-align: justify; }
+  .nosotros__p a {
+    color: white !important;
+    font-style: italic;
+    transition: color .8s; }
+    .nosotros__p a:hover {
+      color: gold !important; }
+
+#logo__container {
+  grid-column: 2 / 3;
+  grid-row: 3 / 5;
+  margin-bottom: 30px; }
+
+#logo__container :hover {
+  transform: rotate(0deg);
+  animation-name: logo-rotate;
+  animation-duration: 1s;
+  animation-delay: 0s; }
+
+@keyframes logo-rotate {
+  100% {
+    transform: rotate(360deg); } }
+
+#coderlogo {
+  margin-left: 35%;
+  width: 30em; }
+
+.nosotros__titulo2 {
+  margin: 20px;
+  font-family: "Electrolize";
+  font-size: 3em;
+  color: white; }
+
+.nosotros__p2 {
+  margin: 20px 10% 0 10%;
+  font-family: "Michroma";
+  font-size: 20px;
+  color: white !important;
+  text-align: justify; }
+
+.titulo-in {
+  margin: 20px;
+  font-family: "Electrolize";
+  font-size: 3em;
+  color: white;
+  transform: translateY(115%); }
+
+.trabajos-titulo {
+  font-family: "Electrolize";
+  color: white;
+  transform: translateY(100%);
+  font-size: 3em;
+  margin: 12% 0 10px 20px;
+  padding: 0; }
+
+.container-tarjetas {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto; }
+
+#services {
+  margin: 80px 0 0 20px !important;
+  grid-column: 1 / 2;
+  font-family: "Electrolize";
+  font-size: 3em;
+  color: #fcfcfc; }
+
+#titulo-center {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  margin: 5%;
+  font-family: "Michroma";
+  font-size: 25px;
+  padding: 10px;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  align-self: center;
+  justify-self: center; }
+
+#tarjeta1__lista1 {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  justify-self: center; }
+
+.tarjeta1 {
+  color: black;
+  background-color: #474747;
+  padding: 50px 200px 50px 200px;
+  border-radius: 15px;
+  border: 2px;
+  border-style: solid;
+  border-color: white;
+  transition: background-color .8s; }
+  .tarjeta1:hover {
+    color: black;
+    background-color: lightgray; }
+  .tarjeta1 h3 {
+    font-family: "Electrolize";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 35px; }
+  .tarjeta1 ul li {
+    font-family: "Michroma";
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+#titulo-center2 {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  margin: 5%;
+  font-family: "Michroma";
+  font-size: 25px;
+  padding: 10px;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  align-self: center;
+  justify-self: center; }
+
+#tarjeta2__lista2 {
+  grid-column: 2 / 3;
+  grid-row: 6 / 7; }
+
+.tarjeta2 {
+  grid-column: 2 / 3;
+  grid-row: 7 / 8;
+  color: black;
+  background-color: #474747;
+  padding: 50px 200px 50px 200px;
+  border-radius: 15px;
+  border: 2px;
+  border-style: solid;
+  border-color: white;
+  transition: background-color .8s; }
+  .tarjeta2:hover {
+    color: black;
+    background-color: lightgray; }
+  .tarjeta2 h3 {
+    font-family: "Electrolize";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 35px; }
+  .tarjeta2 ul li {
+    font-family: "Michroma";
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+.titulo-contacto {
+  transform: translateY(60px);
+  margin: 20px;
+  font-family: "Electrolize";
+  font-size: 3em;
+  color: white; }
+
+.container {
+  transform: translateY(15%); }
+
+.col-2 {
+  color: white; }
+
+.col-22 {
+  margin-left: 15px; }
+
+.col-form-label {
+  color: white; }
+
+.form-check-label {
+  color: white;
+  margin: 8px 0 20px 0; }
+
+.titulo-aprende {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  font-family: "Michroma";
+  font-size: 20px;
+  color: white; }
+
+.lineasdecontacto {
+  transform: translateY(80%); }
+
+.lineasdecontacto__tel {
+  font-family: "Michroma";
+  color: white;
+  transform: translateY(-150%);
+  margin-left: 50px; }
+
+.lineasdecontacto__mail {
+  font-family: "Michroma";
+  color: white;
+  transform: translateY(-170%);
+  margin-left: 50px; }
+
+.lineasdecontacto__street1 {
+  font-family: "Michroma";
+  color: white;
+  transform: translateY(-170%);
+  margin-left: 50px; }
+
+.lineasdecontacto__street2 {
+  font-family: "Michroma";
+  color: white;
+  transform: translateY(-170%);
+  margin-left: 50px; }
+
+.lineasdecontacto__street3 {
+  font-family: "Michroma";
+  color: white;
+  transform: translateY(-170%);
+  margin-left: 50px; }
+
+.google-maps {
+  transform: translateY(-25%);
+  margin-left: 50%; }
+
+* {
+  text-decoration: none !important;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: black; }
+
+/*------------------------------------------------------------------------------INICIO-----------------------------------*/
 @media screen and (max-width: 412px) {
   .texto-bar {
     display: none; }
@@ -85,7 +382,7 @@ body {
     row-gap: 40px;
     transform: translateY(-5%); }
   .titulo__pag {
-    margin: 150px 0 20px 10px;
+    margin: 130px 0 20px 10px;
     grid-row: 1 / 2;
     font-size: 35px;
     justify-self: center; }
@@ -103,7 +400,6 @@ body {
   .dev2 {
     grid-column: 2 / 3;
     width: 80%; }
-  /*=======================================NESTING============================*/
   #redes {
     display: flex;
     flex-direction: column;
@@ -112,12 +408,11 @@ body {
     align-self: center; }
     #redes img {
       padding-bottom: 30%; }
-  /*=======================================NESTING============================*/
   #copyright {
     margin-top: 10%;
     grid-column: 1 / 4; }
   .copyright--uppercase {
-    font-size: 7px !important;
+    font-size: 6px !important;
     text-align: center; } }
 
 @media screen and (max-width: 549px) and (min-width: 413px) {
@@ -142,7 +437,6 @@ body {
     row-gap: 35px; }
   .dev2 {
     grid-column: 2 / 3; }
-  /*=======================================NESTING============================*/
   #redes {
     display: flex;
     flex-direction: column;
@@ -150,7 +444,6 @@ body {
     align-self: center; }
     #redes img {
       padding-bottom: 50%; }
-  /*==========================================================================*/
   #copyright {
     grid-column: 1 / 4;
     transform: translateY(50%); }
@@ -235,74 +528,7 @@ body {
     margin-top: 5%;
     font-size: 11px !important; } }
 
-/*------------------------------------NOSOTROS------------------------------------*/
-.nosotros__titulo {
-  margin: 20px;
-  font-family: "Electrolize";
-  font-size: 3em;
-  color: black; }
-
-/*=======================================NESTING============================*/
-.nosotros__p {
-  margin-left: 10%;
-  color: black !important;
-  font-family: "Michroma";
-  font-size: 20px;
-  text-align: justify; }
-  .nosotros__p a {
-    color: black !important;
-    font-style: italic;
-    transition: color .8s; }
-    .nosotros__p a:hover {
-      color: gold !important; }
-
-/*==========================================================================*/
-#logo__container {
-  grid-column: 2 / 3;
-  grid-row: 3 / 5;
-  margin-bottom: 30px; }
-
-#logo__container :hover {
-  transform: rotate(0deg);
-  animation-name: logo-rotate;
-  animation-duration: 1s;
-  animation-delay: 0s; }
-
-@keyframes logo-rotate {
-  100% {
-    transform: rotate(360deg); } }
-
-#coderlogo {
-  margin-left: 35%;
-  width: 30em; }
-
-.nosotros__titulo2 {
-  margin-top: 0px;
-  font-family: "Electrolize";
-  font-size: 3em;
-  color: black !important; }
-
-.nosotros__p2 {
-  margin-top: 20px;
-  margin-left: 10%;
-  font-family: "Michroma";
-  font-size: 20px;
-  color: black !important;
-  text-align: justify; }
-
-.copyright2 {
-  margin-top: 3%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); }
-
-.copyright--uppercase2 {
-  margin: 0 0 3% 0;
-  grid-column: 2 / 3;
-  justify-self: center;
-  text-transform: uppercase;
-  color: white;
-  font-size: 13px; }
-
+/*-------------------------------------------------------------------------NOSOTROS------------------------------------------------------------*/
 @media screen and (max-width: 412px) {
   .texto-bar {
     display: none; }
@@ -329,7 +555,7 @@ body {
   .copyright--uppercase2 {
     margin-top: 0%;
     grid-column: 1 / 4;
-    font-size: 7px !important; } }
+    font-size: 6px !important; } }
 
 @media screen and (max-width: 720px) and (min-width: 413px) {
   .nosotros__titulo {
@@ -378,29 +604,7 @@ body {
     grid-column: 1 / 4;
     font-size: 11px !important; } }
 
-/*-------------------------------------PROYECTOS--------------------*/
-.titulo-in {
-  font-family: "Electrolize";
-  color: white;
-  transform: translateY(60%);
-  font-size: 3em;
-  margin: 80px 0 10px 20px;
-  padding: 0; }
-
-.trabajos-titulo {
-  font-family: "Electrolize";
-  color: white;
-  transform: translateY(60%);
-  font-size: 3em;
-  margin: 12% 0 10px 20px;
-  padding: 0; }
-
-.footer2 {
-  transform: translateY(300%); }
-
-.copyright--uppercase2 {
-  font-size: 13px; }
-
+/*------------------------------------------------------------------------PROYECTOS----------------------------*/
 @media screen and (max-width: 412px) {
   .titulo-in {
     font-size: 1.8em;
@@ -412,7 +616,7 @@ body {
   .footer2 {
     transform: translateY(400%); }
   .copyright--uppercase2 {
-    font-size: 7px !important; } }
+    font-size: 6px !important; } }
 
 @media screen and (max-width: 720px) and (min-width: 413px) {
   .titulo-in {
@@ -441,121 +645,7 @@ body {
   .copyright--uppercase2 {
     font-size: 11px !important; } }
 
-/*---------------------------------SERVICIOS----------------------*/
-.container-tarjetas {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto; }
-
-#services {
-  margin: 80px 0 0 20px;
-  grid-column: 1 / 2;
-  font-family: "Electrolize";
-  font-size: 3em;
-  color: #fcfcfc; }
-
-#titulo-center {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  margin: 5%;
-  font-family: "Michroma";
-  font-size: 25px;
-  padding: 10px;
-  color: black;
-  background-color: white;
-  border-radius: 10px;
-  align-self: center;
-  justify-self: center; }
-
-#tarjeta1__lista1 {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
-  justify-self: center; }
-
-/*=======================================NESTING============================*/
-.tarjeta1 {
-  color: black;
-  background-color: #474747;
-  padding: 50px 200px 50px 200px;
-  border-radius: 15px;
-  border: 2px;
-  border-style: solid;
-  border-color: white;
-  transition: background-color .8s; }
-  .tarjeta1:hover {
-    color: black;
-    background-color: lightgray; }
-  .tarjeta1 h3 {
-    font-family: "Electrolize";
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 35px; }
-  .tarjeta1 ul li {
-    font-family: "Michroma";
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-
-/*==========================================================================*/
-#titulo-center2 {
-  grid-column: 2 / 3;
-  grid-row: 5 / 6;
-  margin: 5%;
-  font-family: "Michroma";
-  font-size: 25px;
-  padding: 10px;
-  color: black;
-  background-color: white;
-  border-radius: 10px;
-  align-self: center;
-  justify-self: center; }
-
-#tarjeta2__lista2 {
-  grid-column: 2 / 3;
-  grid-row: 6 / 7; }
-
-/*=======================================NESTING============================*/
-.tarjeta2 {
-  grid-column: 2 / 3;
-  grid-row: 7 / 8;
-  color: black;
-  background-color: #474747;
-  padding: 50px 200px 50px 200px;
-  border-radius: 15px;
-  border: 2px;
-  border-style: solid;
-  border-color: white;
-  transition: background-color .8s; }
-  .tarjeta2:hover {
-    color: black;
-    background-color: lightgray; }
-  .tarjeta2 h3 {
-    font-family: "Electrolize";
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 35px; }
-  .tarjeta2 ul li {
-    font-family: "Michroma";
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-
-/*==========================================================================*/
-.copyright3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); }
-
-.copyright--uppercase3 {
-  margin: 5% 0 2% 0;
-  grid-column: 2;
-  align-self: center;
-  justify-self: center;
-  text-transform: uppercase;
-  color: white;
-  font-size: 13px; }
-
+/*------------------------------------------------------------------------SERVICIOS--------------------------------------------*/
 @media screen and (max-width: 412px) {
   .container-tarjetas {
     grid-template-columns: 1fr; }
@@ -595,7 +685,7 @@ body {
   .copyright--uppercase3 {
     grid-column: 1 / -1;
     text-align: center;
-    font-size: 7px !important; } }
+    font-size: 6px !important; } }
 
 @media screen and (max-width: 720px) and (min-width: 413px) {
   .container-tarjetas {
@@ -625,7 +715,7 @@ body {
   #tarjeta2__lista2 {
     grid-column: 1 / 2; }
   .tarjeta2 {
-    margin: 5% 20% 5% 20%;
+    margin: 5% 10% 5% 10%;
     padding: 0px; }
   .tarjeta2 ul li {
     font-size: 13px;
@@ -676,96 +766,7 @@ body {
     text-align: center;
     font-size: 11px !important; } }
 
-/*----------------------------------CONTACTO-------------------------*/
-.titulo-contacto {
-  transform: translateY(75px);
-  font-family: "Electrolize";
-  color: white;
-  font-size: 3em;
-  margin-left: 20px; }
-
-.container {
-  transform: translateY(15%); }
-
-.col-2 {
-  color: white; }
-
-.col-22 {
-  margin-left: 15px; }
-
-.col-form-label {
-  color: white; }
-
-.form-check-label {
-  color: white;
-  margin: 8px 0 20px 0; }
-
-.titulo-aprende {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-  font-family: "Michroma";
-  font-size: 20px;
-  color: white; }
-
-.lineasdecontacto {
-  transform: translateY(80%); }
-
-.lineasdecontacto__tel {
-  font-family: "Michroma";
-  color: white;
-  transform: translateY(-150%);
-  margin-left: 50px; }
-
-.lineasdecontacto__mail {
-  font-family: "Michroma";
-  color: white;
-  transform: translateY(-170%);
-  margin-left: 50px; }
-
-.lineasdecontacto__street1 {
-  font-family: "Michroma";
-  color: white;
-  transform: translateY(-170%);
-  margin-left: 50px; }
-
-.lineasdecontacto__street2 {
-  font-family: "Michroma";
-  color: white;
-  transform: translateY(-170%);
-  margin-left: 50px; }
-
-.lineasdecontacto__street3 {
-  font-family: "Michroma";
-  color: white;
-  transform: translateY(-170%);
-  margin-left: 50px; }
-
-.google-maps {
-  transform: translateY(-25%);
-  margin-left: 50%; }
-
-.footer-contact {
-  transform: translateY(-20%);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr; }
-
-#copyright4 {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  align-self: end;
-  justify-self: center; }
-
-.copyright--uppercase4 {
-  text-transform: uppercase;
-  color: white;
-  font-size: 13px; }
-
-#redes2 {
-  margin-top: 10px;
-  grid-column: 3 / 4;
-  justify-self: center; }
-
+/*-------------------------------------------------------------------------CONTACTO----------------------------------------------*/
 @media screen and (max-width: 413px) {
   .google-maps {
     transform: translateY(55%);
@@ -773,9 +774,9 @@ body {
   .copyright--uppercase4 {
     font-size: 10px; }
   .lineasdecontacto__mail {
-    font-size: 14px; }
+    font-size: 13px !important; }
   .copyright--uppercase4 {
-    font-size: 7px !important; } }
+    font-size: 6px !important; } }
 
 @media screen and (max-width: 625px) and (min-width: 414px) {
   .google-maps {

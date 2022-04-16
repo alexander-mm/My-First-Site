@@ -1,0 +1,348 @@
+@mixin titulosP {
+    margin: 20px;
+    font-family: $font-primary;
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+}
+
+
+//INICIO
+
+.texto-bar{
+    font-family: $font-secondary !important;
+    font-size: $font-l;
+}
+
+.tiulo-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    transform: translateY(100px);
+}
+
+.titulo__pag{
+    grid-row: 1 / 2;
+    font-family: $font-primary;
+    font-size: 120px;
+    color: white;
+    margin-top: 11%;
+    margin-left: 5%;
+    width: 95%;
+    animation-name: aparecer;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aparecer{
+    0%{ opacity: 0%; }
+    50%{ opacity: 100%; }
+    100%{ opacity: 0%; }
+} 
+
+.titulo__subpag{
+    grid-row: 2 / -1;
+    font-family: $font-secondary;
+    font-size: 34px;
+    color: white;
+    margin-left: 45%;
+    margin-bottom: 10%;
+    animation-name: aparecer;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aparecer{
+    0%{ opacity: 0%; }
+    50%{ opacity: 100%; }
+    100%{ opacity: 0%; }
+} 
+
+
+
+
+
+
+//NOSOTROS
+
+.nosotros__titulo{
+    @include titulosP;
+}
+
+//NESTING
+.nosotros__p{
+    margin: 20px 10% 0 10%;
+    color: white !important;
+    font-family: $font-secondary;
+    font-size: 20px;
+    text-align: justify;
+    a{
+        color: white !important;
+        font-style: italic;
+        transition: color .8s;
+
+        &:hover{
+            color: gold !important;
+        }
+    }
+}
+
+#logo__container{
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+    margin-bottom: 30px;
+}
+
+#logo__container :hover{
+    transform: rotate(0deg);
+    animation-name: logo-rotate;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+@keyframes logo-rotate{
+    100%{ transform: rotate(360deg); }
+}
+
+#coderlogo{
+    margin-left: 35%;
+    width: 30em;
+}
+
+.nosotros__titulo2{
+    @include titulosP;
+}
+
+.nosotros__p2{
+    margin: 20px 10% 0 10%;
+    font-family: $font-secondary;
+    font-size: 20px;
+    color: rgb(255, 255, 255) !important;
+    text-align: justify;
+}
+
+
+
+
+
+//PROYECTOS
+.titulo-in{
+    @include titulosP;
+    transform: translateY(115%);
+}
+
+.trabajos-titulo{
+    font-family: $font-primary;
+    color: white;
+    transform: translateY(100%);
+    font-size: 3em;
+    margin: 12% 0 10px 20px;
+    padding: 0;
+}
+
+
+
+
+
+//SERVICIOS
+.container-tarjetas{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+}
+
+#services{
+    margin: 80px 0 0 20px !important;
+    grid-column: 1 / 2;
+    font-family: $font-primary;
+    font-size: 3em;
+    color: rgb(252, 252, 252);
+}
+
+#titulo-center{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin: 5%;
+    font-family: $font-secondary;
+    font-size: 25px;
+    padding: 10px;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center;
+}
+
+#tarjeta1__lista1{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    justify-self: center;
+}
+
+//NESTING
+.tarjeta1{
+    color: black;
+    background-color:rgb(71, 71, 71);
+    padding: 50px 200px 50px 200px;
+    border-radius: 15px;
+    border: 2px;
+    border-style: solid;
+    border-color: white;
+    transition: background-color .8s;
+        
+        &:hover{
+            color: black;
+            background-color: lightgray;
+        }
+            h3{
+                font-family: $font-primary;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 35px;
+            }
+                ul{
+                    li{
+                        font-family: $font-secondary;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
+}
+
+#titulo-center2{
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    margin: 5%;
+    font-family: $font-secondary;
+    font-size: 25px;
+    padding: 10px;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center;
+}
+
+#tarjeta2__lista2{
+    grid-column: 2 / 3;
+    grid-row: 6 / 7;
+}
+
+//NESTING
+.tarjeta2{
+    grid-column: 2 / 3;
+    grid-row: 7 / 8;
+    color: black;
+    background-color:rgb(71, 71, 71);
+    padding:50px 200px 50px 200px;
+    border-radius: 15px;
+    border: 2px;
+    border-style: solid;
+    border-color: white;
+    transition: background-color .8s;  
+        &:hover{
+            color: black;
+            background-color: lightgray;
+        }
+            h3{
+                font-family: $font-primary;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 35px;
+            }
+                ul{
+                    li{
+                        font-family: $font-secondary;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
+
+}
+
+
+
+
+
+//CONTACTO
+.titulo-contacto{
+    transform: translateY(60px);
+    @include titulosP;
+}
+
+.container{
+    transform: translateY(15%);
+}
+
+.col-2{
+    color: white;
+}
+
+.col-22{
+    margin-left: 15px;
+}
+
+.col-form-label{
+    color: white;
+}
+
+.form-check-label{
+    color: white;
+    margin: 8px 0 20px 0;
+}
+
+.titulo-aprende{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-family: $font-secondary;
+    font-size: 20px;
+    color: white;
+}
+
+.lineasdecontacto{
+    transform: translateY(80%);
+}
+
+.lineasdecontacto__tel{
+    font-family: $font-secondary;
+    color: white;
+    transform: translateY(-150%);
+    margin-left: 50px;
+}
+
+.lineasdecontacto__mail{
+    font-family: $font-secondary;
+    color: white;
+    transform: translateY(-170%);
+    margin-left: 50px;
+}
+
+.lineasdecontacto__street1{
+    font-family: $font-secondary;
+    color: white;
+    transform: translateY(-170%);
+    margin-left: 50px;
+}
+
+.lineasdecontacto__street2{
+    font-family: $font-secondary;
+    color: white;
+    transform: translateY(-170%);
+    margin-left: 50px;
+}
+
+.lineasdecontacto__street3{
+    font-family: $font-secondary;
+    color: white;
+    transform: translateY(-170%);
+    margin-left: 50px;
+}
+
+.google-maps{
+    transform: translateY(-25%);
+    margin-left: 50%;
+}
