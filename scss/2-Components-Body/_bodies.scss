@@ -5,6 +5,7 @@
     color: rgb(255, 255, 255);
 }
 
+$grayscale: ("1": #9CA0A3, "2": #606365, "3": #333536,);
 
 //INICIO
 
@@ -167,7 +168,7 @@
     font-size: 25px;
     padding: 10px;
     color: black;
-    background-color: white;
+    background-color: map-get($grayscale: 3);
     border-radius: 10px;
     align-self: center;
     justify-self: center;
