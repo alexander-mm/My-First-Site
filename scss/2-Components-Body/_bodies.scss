@@ -1,14 +1,72 @@
+
+//MIXIN=======================================================================
 @mixin titulosP {
     margin: 20px;
     font-family: $font-primary;
     font-size: 3em;
     color: rgb(255, 255, 255);
 }
+@mixin titulos-lista {
+    font-family: $font-primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 35px;
+}
+@mixin list-item{
+    font-family: $font-secondary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin parrafos{
+    margin: 20px 10% 0 10%;
+    font-family: $font-secondary;
+    color: white !important;
+    font-size: 20px;
+    text-align: justify;
+}
 
-$grayscale: ("1": #9CA0A3, "2": #606365, "3": #333536,);
+//MAPS========================================================================
+$grayscale: (
+    "0": white,
+    "1": #9CA0A3,
+    "2": #606365,
+    "3": #333536,
+    "4": linear-gradient(#9CA0A3, #606365, #333536,)
+    );
 
-//INICIO
+//EXTEND======================================================================
+.ucenter{
+    grid-column: 2 / 3;
+    margin: 5%;
+    font-family: $font-secondary;
+    font-size: 25px;
+    padding: 10px;
+    color: black;
+    background-color: map-get($grayscale, "0");
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center;
+}
 
+.ucards{
+    grid-column: 2 / 3;
+    color: black;
+    background: map-get($grayscale, "4");
+    padding: 50px 200px 50px 200px;
+    border-radius: 15px;
+    border: 2px;
+    border-style: solid;
+    border-color: white;
+    transition: background-color .8s;
+}
+
+
+
+
+
+//INICIO==============================================================================================================================================================================================================
 .texto-bar{
     font-family: $font-secondary !important;
     font-size: $font-l;
@@ -64,29 +122,24 @@ $grayscale: ("1": #9CA0A3, "2": #606365, "3": #333536,);
 
 
 
+//NOSOTROS============================================================================================================================================================================================================
 
-//NOSOTROS
-
+//MIXIN=======================================================================
 .nosotros__titulo{
     @include titulosP;
 }
 
-//NESTING
+//NESTING=====================================================================
 .nosotros__p{
-    margin: 20px 10% 0 10%;
-    color: white !important;
-    font-family: $font-secondary;
-    font-size: 20px;
-    text-align: justify;
-    a{
-        color: white !important;
-        font-style: italic;
-        transition: color .8s;
-
-        &:hover{
-            color: gold !important;
+    @include parrafos;
+        a{
+            color: white !important;
+            font-style: italic;
+            transition: color .8s;
+                &:hover{
+                    color: gold !important;
+                }
         }
-    }
 }
 
 #logo__container{
@@ -110,42 +163,39 @@ $grayscale: ("1": #9CA0A3, "2": #606365, "3": #333536,);
     width: 30em;
 }
 
+//MIXIN=======================================================================
 .nosotros__titulo2{
     @include titulosP;
 }
 
 .nosotros__p2{
-    margin: 20px 10% 0 10%;
-    font-family: $font-secondary;
-    font-size: 20px;
-    color: rgb(255, 255, 255) !important;
-    text-align: justify;
+    @include parrafos;
 }
 
 
 
 
 
-//PROYECTOS
+//PROYECTOS============================================================================================================================================================================================================
+
+//MIXIN=======================================================================
 .titulo-in{
     @include titulosP;
     transform: translateY(115%);
 }
 
 .trabajos-titulo{
-    font-family: $font-primary;
-    color: white;
+    @include titulosP;
     transform: translateY(100%);
-    font-size: 3em;
-    margin: 12% 0 10px 20px;
-    padding: 0;
+    margin: 12% 0 10px 20px !important;
+    padding: 0 !important;
 }
 
 
 
 
 
-//SERVICIOS
+//SERVICIOS===================================================================
 .container-tarjetas{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -160,18 +210,10 @@ $grayscale: ("1": #9CA0A3, "2": #606365, "3": #333536,);
     color: rgb(252, 252, 252);
 }
 
+//EXTEND======================================================================
 #titulo-center{
-    grid-column: 2 / 3;
+    @extend .ucenter;
     grid-row: 2 / 3;
-    margin: 5%;
-    font-family: $font-secondary;
-    font-size: 25px;
-    padding: 10px;
-    color: black;
-    background-color: map-get($grayscale: 3);
-    border-radius: 10px;
-    align-self: center;
-    justify-self: center;
 }
 
 #tarjeta1__lista1{
@@ -180,50 +222,30 @@ $grayscale: ("1": #9CA0A3, "2": #606365, "3": #333536,);
     justify-self: center;
 }
 
-//NESTING
+//NESTING=====================================================================
+//EXTEND======================================================================
+//MIXIN=======================================================================
 .tarjeta1{
-    color: black;
-    background-color:rgb(71, 71, 71);
-    padding: 50px 200px 50px 200px;
-    border-radius: 15px;
-    border: 2px;
-    border-style: solid;
-    border-color: white;
-    transition: background-color .8s;
-        
+    @extend .ucards;
+    grid-row: 3 / 4;
         &:hover{
             color: black;
             background-color: lightgray;
         }
             h3{
-                font-family: $font-primary;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                font-size: 35px;
+                @include titulos-lista;
             }
                 ul{
                     li{
-                        font-family: $font-secondary;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
+                        @include list-item;
                     }
                 }
 }
 
+//EXTEND======================================================================
 #titulo-center2{
-    grid-column: 2 / 3;
+    @extend .ucenter;
     grid-row: 5 / 6;
-    margin: 5%;
-    font-family: $font-secondary;
-    font-size: 25px;
-    padding: 10px;
-    color: black;
-    background-color: white;
-    border-radius: 10px;
-    align-self: center;
-    justify-self: center;
 }
 
 #tarjeta2__lista2{
@@ -231,35 +253,22 @@ $grayscale: ("1": #9CA0A3, "2": #606365, "3": #333536,);
     grid-row: 6 / 7;
 }
 
-//NESTING
+//NESTING=====================================================================
+//EXTEND======================================================================
+//MIXIN=======================================================================
 .tarjeta2{
-    grid-column: 2 / 3;
+    @extend .ucards;
     grid-row: 7 / 8;
-    color: black;
-    background-color:rgb(71, 71, 71);
-    padding:50px 200px 50px 200px;
-    border-radius: 15px;
-    border: 2px;
-    border-style: solid;
-    border-color: white;
-    transition: background-color .8s;  
         &:hover{
             color: black;
             background-color: lightgray;
         }
             h3{
-                font-family: $font-primary;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                font-size: 35px;
+                @include titulos-lista;
             }
                 ul{
                     li{
-                        font-family: $font-secondary;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
+                        @include list-item;
                     }
                 }
 
@@ -269,7 +278,9 @@ $grayscale: ("1": #9CA0A3, "2": #606365, "3": #333536,);
 
 
 
-//CONTACTO
+//CONTACTO============================================================================================================================================================================================================
+
+//MIXIN=======================================================================
 .titulo-contacto{
     transform: translateY(60px);
     @include titulosP;

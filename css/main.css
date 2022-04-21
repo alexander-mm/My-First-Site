@@ -83,6 +83,29 @@
   grid-column: 3 / 4;
   justify-self: center; }
 
+.ucenter, #titulo-center, #titulo-center2 {
+  grid-column: 2 / 3;
+  margin: 5%;
+  font-family: "Michroma";
+  font-size: 25px;
+  padding: 10px;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  align-self: center;
+  justify-self: center; }
+
+.ucards, .tarjeta1, .tarjeta2 {
+  grid-column: 2 / 3;
+  color: black;
+  background: linear-gradient(#9CA0A3, #606365, #333536);
+  padding: 50px 200px 50px 200px;
+  border-radius: 15px;
+  border: 2px;
+  border-style: solid;
+  border-color: white;
+  transition: background-color .8s; }
+
 .texto-bar {
   font-family: "Michroma" !important;
   font-size: 13px; }
@@ -142,8 +165,8 @@
 
 .nosotros__p {
   margin: 20px 10% 0 10%;
-  color: white !important;
   font-family: "Michroma";
+  color: white !important;
   font-size: 20px;
   text-align: justify; }
   .nosotros__p a {
@@ -181,8 +204,8 @@
 .nosotros__p2 {
   margin: 20px 10% 0 10%;
   font-family: "Michroma";
-  font-size: 20px;
   color: white !important;
+  font-size: 20px;
   text-align: justify; }
 
 .titulo-in {
@@ -193,12 +216,13 @@
   transform: translateY(115%); }
 
 .trabajos-titulo {
+  margin: 20px;
   font-family: "Electrolize";
+  font-size: 3em;
   color: white;
   transform: translateY(100%);
-  font-size: 3em;
-  margin: 12% 0 10px 20px;
-  padding: 0; }
+  margin: 12% 0 10px 20px !important;
+  padding: 0 !important; }
 
 .container-tarjetas {
   display: grid;
@@ -213,17 +237,7 @@
   color: #fcfcfc; }
 
 #titulo-center {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  margin: 5%;
-  font-family: "Michroma";
-  font-size: 25px;
-  padding: 10px;
-  color: black;
-  background-color: white;
-  border-radius: 10px;
-  align-self: center;
-  justify-self: center; }
+  grid-row: 2 / 3; }
 
 #tarjeta1__lista1 {
   grid-column: 2 / 3;
@@ -231,14 +245,7 @@
   justify-self: center; }
 
 .tarjeta1 {
-  color: black;
-  background-color: #474747;
-  padding: 50px 200px 50px 200px;
-  border-radius: 15px;
-  border: 2px;
-  border-style: solid;
-  border-color: white;
-  transition: background-color .8s; }
+  grid-row: 3 / 4; }
   .tarjeta1:hover {
     color: black;
     background-color: lightgray; }
@@ -255,33 +262,14 @@
     align-items: center; }
 
 #titulo-center2 {
-  grid-column: 2 / 3;
-  grid-row: 5 / 6;
-  margin: 5%;
-  font-family: "Michroma";
-  font-size: 25px;
-  padding: 10px;
-  color: black;
-  background-color: white;
-  border-radius: 10px;
-  align-self: center;
-  justify-self: center; }
+  grid-row: 5 / 6; }
 
 #tarjeta2__lista2 {
   grid-column: 2 / 3;
   grid-row: 6 / 7; }
 
 .tarjeta2 {
-  grid-column: 2 / 3;
-  grid-row: 7 / 8;
-  color: black;
-  background-color: #474747;
-  padding: 50px 200px 50px 200px;
-  border-radius: 15px;
-  border: 2px;
-  border-style: solid;
-  border-color: white;
-  transition: background-color .8s; }
+  grid-row: 7 / 8; }
   .tarjeta2:hover {
     color: black;
     background-color: lightgray; }
