@@ -1,7 +1,7 @@
 {
   "name": "web",
   "version": "1.0.0",
-  "description": "",
+  "description": "Somos los mejores creando sitios en Internet, somos especialistas en el Desarrollo Web y dominamos los Lenguajes de Programación más Populares en el mundo!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/codeengineersgroup/my_first.git"
   },
-  "author": "",
+  "author": "Alexander Mena CEO: Code Engineers Group",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/codeengineersgroup/my_first/issues"

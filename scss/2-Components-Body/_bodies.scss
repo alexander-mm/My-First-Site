@@ -88,7 +88,7 @@ $grayscale: (
     margin-left: 5%;
     width: 95%;
     animation-name: aparecer;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-delay: 0s;
     animation-iteration-count: infinite;
 }
@@ -107,7 +107,7 @@ $grayscale: (
     margin-left: 45%;
     margin-bottom: 10%;
     animation-name: aparecer;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-delay: 0s;
     animation-iteration-count: infinite;
 }
@@ -263,6 +263,9 @@ $grayscale: (
             color: black;
             background-color: lightgray;
         }
+            h1{
+                @include titulos-lista;
+            }
             h3{
                 @include titulos-lista;
             }
