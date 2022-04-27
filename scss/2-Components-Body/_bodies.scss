@@ -232,7 +232,7 @@ $grayscale: (
             color: black;
             background-color: lightgray;
         }
-            h3{
+            h1{
                 @include titulos-lista;
             }
                 ul{
@@ -266,9 +266,7 @@ $grayscale: (
             h1{
                 @include titulos-lista;
             }
-            h3{
-                @include titulos-lista;
-            }
+            
                 ul{
                     li{
                         @include list-item;
