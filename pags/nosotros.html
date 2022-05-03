@@ -5,67 +5,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO===================================================-->
     <meta name="description" content="Nuestra historia como equipo no ha dado el crecimiento y la experiencia que nos distingue ante otros colegas del segmento">
     <meta name= "keywords" content="PROGRAMACION, DISEÑO, WEB, PYTHON, HTML, CSS, JS, JAVASCRIPT, CODERHOUSE">
-
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Orbitron&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Electrolize&family=Michroma&family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="icon" href="../imgs/icontab.ico.jpg">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <title>CEG - Nosotros</title>
 </head>
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color:black">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark navy" style="background-color:black">
             <a href="../index.html" class="navbar-brand text-white">
                 <img src="../imgs/logo.png" height="50px" title="Inicio">
                 <span class="texto-bar">
                     Code Engineers Group
                 </span>
             </a>
+            <button class="onoff" id="onoff">
+                <span><ion-icon name="moon-outline"></ion-icon></span>
+                <span><ion-icon name="sunny-outline"></ion-icon></span>               
+            </button>
             <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a href="../index.html" class="nav-link font-weight-bold">INICIO</a>
+                        <a href="../index.html" class="nav-link font-weight-bold linky">INICIO</a>
                     </li>
                     <li class="nav-item active">
-                        <a href="nosotros.html" class="nav-link font-weight-bold">NOSOTROS</a>
+                        <a href="nosotros.html" class="nav-link font-weight-bold linky">NOSOTROS</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active font-weight-bold" data-toggle="dropdown" data-target="desplegable" href="./pags/proyectos.html">PROYECTOS</a>
+                        <a class="nav-link dropdown-toggle active font-weight-bold linky" data-toggle="dropdown" data-target="desplegable" href="./pags/proyectos.html">PROYECTOS</a>
                         <div class="dropdown-menu bg-dark">
                             <a class="dropdown-item text-white bg-dark" href="proyectos.html">Plantillas de Muestra</a>
                             <a class="dropdown-item text-white bg-dark" href="proyectos.html">Trabajos Realizados</a>
                         </div>
                     </li>
                     <li class="nav-item active">
-                        <a href="servicios.html" class="nav-link font-weight-bold">SERVICIOS</a>
+                        <a href="servicios.html" class="nav-link font-weight-bold linky">SERVICIOS</a>
                     </li>
                     <li class="nav-item active">
-                        <a href="contacto.html" class="nav-link font-weight-bold">CONTACTO</a>
+                        <a href="contacto.html" class="nav-link font-weight-bold linky">CONTACTO</a>
                     </li>
                 </ul>
             </div>
         </nav>        
     </header>
     <section>
-        <div class="jumbotron jumbotron-fluid" style="background-color: black;">                    
-            <h1 class="display-4 nosotros__titulo">¿Quiénes Somos?</h1>
-            <p class="nosotros__p lead">Somos un grupo de jóvenes emprendedores Colombianos, apasionados por nuestra profesión como Desarrolladores Web y Programadores para Empresas. <br> Todos fuimos formados y certificados por <strong><a id="link" href="https://www.coderhouse.com.co/">CODERHOUSE</a></strong>, una de las más reconocidas plataformas de e-Learning en Programación.</p>
+        <div class="jumbotron jumbotron-fluid jumby">                    
+            <h1 class="display-4 nosotros__titulo jumby">¿Quiénes Somos?</h1>
+            <p class="nosotros__p lead jumby">Somos un grupo de jóvenes emprendedores Colombianos, apasionados por nuestra profesión como Desarrolladores Web y Programadores para Empresas. <br> Todos fuimos formados y certificados por <strong><a id="link" href="https://www.coderhouse.com.co/">CODERHOUSE</a></strong>, una de las más reconocidas plataformas de e-Learning en Programación.</p>
         </div>
         <div id="logo__container">
             <a href="https://www.coderhouse.com.co/"><img id="coderlogo" src="../imgs/coderlogo.png" alt="CODERHOUSE"></a>
         </div>
-        <div class="jumbotron jumbotron-fluid" style="background-color: black;">
+        <div class="jumbotron jumbotron-fluid jumby">
             <div class="container-fluid">
-              <h1 class="display-4 nosotros__titulo2">¿Nuestra Trayectoria?</h1>
-              <p class="nosotros__p2">Empezamos siendo personas autodidactas y empíricas en el diseño web, hicimos varios prototipos y las compartíamos en redes, pasado un tiempo las personas miraron nuestra calidad y empezamos a ser contratados; algunas ofertas de trabajo fueron en equipo y otras como trabajos individuales. Un día decidimos juntar 100% nuestro talento y nuestros contratos, así mismo surgió la necesidad de aprender más lenguajes de programación y empezamos a trabajar en empresas para programar procesos automatizados o trabajos que para el humano a veces es impreciso de realizar. <br> <br>
+              <h1 class="display-4 nosotros__titulo2 jumby">¿Nuestra Trayectoria?</h1>
+              <p class="nosotros__p2 jumby">Empezamos siendo personas autodidactas y empíricas en el diseño web, hicimos varios prototipos y las compartíamos en redes, pasado un tiempo las personas miraron nuestra calidad y empezamos a ser contratados; algunas ofertas de trabajo fueron en equipo y otras como trabajos individuales. Un día decidimos juntar 100% nuestro talento y nuestros contratos, así mismo surgió la necesidad de aprender más lenguajes de programación y empezamos a trabajar en empresas para programar procesos automatizados o trabajos que para el humano a veces es impreciso de realizar. <br> <br>
                 Dominamos lenguajes de desarrollo de software, apps para dispositivos móviles, tareas remotas, vigilancia con IA para hogares y empresas, programación de dispositivos para casas inteligentes y algunas otras que sin dejar de ser importantes nos brindan el reconocimiento y la calidad de nuestro trabajo.</p>
             </div>
         </div>
@@ -75,6 +78,7 @@
             <h6 class="copyright--uppercase2">©Copyright All Rights Reserved - Code Engineers Group 2022</h6>
         </div>
     </footer>
+        <script src="/js/main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>

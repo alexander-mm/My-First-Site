@@ -24,6 +24,8 @@
   justify-self: center;
   align-self: end;
   color: white; }
+  body.dark #copyright {
+    color: black !important; }
 
 .copyright--uppercase {
   text-transform: uppercase;
@@ -41,12 +43,16 @@
   text-transform: uppercase;
   color: white;
   font-size: 13px; }
+  body.dark .copyright--uppercase2 {
+    color: black !important; }
 
 .footer2 {
   transform: translateY(300%); }
 
 .copyright--uppercase2 {
   font-size: 13px; }
+  body.dark .copyright--uppercase2 {
+    color: black !important; }
 
 .copyright3 {
   display: grid;
@@ -60,6 +66,8 @@
   text-transform: uppercase;
   color: white;
   font-size: 13px; }
+  body.dark .copyright--uppercase3 {
+    color: black; }
 
 .footer-contact {
   transform: translateY(-20%);
@@ -93,11 +101,15 @@
   background-color: white;
   border-radius: 10px;
   align-self: center;
-  justify-self: center; }
+  justify-self: center;
+  transition: .3s ease all; }
+  body.dark .ucenter, body.dark #titulo-center, body.dark #titulo-center2 {
+    background-color: black;
+    color: white; }
 
 .ucards, .tarjeta1, .tarjeta2 {
   grid-column: 2 / 3;
-  color: black;
+  color: white;
   background: linear-gradient(#9CA0A3, #606365, #333536);
   padding: 50px 200px 50px 200px;
   border-radius: 15px;
@@ -106,9 +118,56 @@
   border-color: white;
   transition: background-color .8s; }
 
+.navy {
+  transition: .3s ease all; }
+  body.dark .navy {
+    background: white !important; }
+
+.linky {
+  transition: .3s ease all; }
+  body.dark .linky {
+    color: black !important; }
+
 .texto-bar {
   font-family: "Michroma" !important;
-  font-size: 13px; }
+  font-size: 13px;
+  transition: .3s ease all; }
+  body.dark .texto-bar {
+    color: black !important; }
+
+.onoff {
+  background: white;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none; }
+  .onoff::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #535353;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2); }
+  .onoff.active {
+    background: #b6b6b6; }
+    .onoff.active::after {
+      right: 0;
+      left: unset; }
+  .onoff span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: black; }
 
 .tiulo-container {
   display: grid;
@@ -128,6 +187,8 @@
   animation-duration: 3s;
   animation-delay: 0s;
   animation-iteration-count: infinite; }
+  body.dark .titulo__pag {
+    color: black !important; }
 
 @keyframes aparecer {
   0% {
@@ -148,6 +209,8 @@
   animation-duration: 3s;
   animation-delay: 0s;
   animation-iteration-count: infinite; }
+  body.dark .titulo__subpag {
+    color: black !important; }
 
 @keyframes aparecer {
   0% {
@@ -161,7 +224,10 @@
   margin: 20px;
   font-family: "Electrolize";
   font-size: 3em;
-  color: white; }
+  color: white;
+  transition: .3s ease all; }
+  body.dark .nosotros__titulo {
+    color: black; }
 
 .nosotros__p {
   margin: 20px 10% 0 10%;
@@ -170,16 +236,30 @@
   font-size: 20px;
   text-align: justify; }
   .nosotros__p a {
-    color: white !important;
+    color: white;
     font-style: italic;
     transition: color .8s; }
+    body.dark .nosotros__p a {
+      color: black !important; }
+      body.dark .nosotros__p a:hover {
+        color: gold !important; }
     .nosotros__p a:hover {
       color: gold !important; }
+
+.jumby {
+  transition: .3s ease all;
+  background-color: black; }
+  body.dark .jumby {
+    background-color: white !important;
+    color: black !important; }
 
 #logo__container {
   grid-column: 2 / 3;
   grid-row: 3 / 5;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  transition: .3s ease all; }
+  body.dark #logo__container {
+    background-color: black; }
 
 #logo__container :hover {
   transform: rotate(0deg);
@@ -199,7 +279,10 @@
   margin: 20px;
   font-family: "Electrolize";
   font-size: 3em;
-  color: white; }
+  color: white;
+  transition: .3s ease all; }
+  body.dark .nosotros__titulo2 {
+    color: black; }
 
 .nosotros__p2 {
   margin: 20px 10% 0 10%;
@@ -213,16 +296,22 @@
   font-family: "Electrolize";
   font-size: 3em;
   color: white;
+  transition: .3s ease all;
   transform: translateY(115%); }
+  body.dark .titulo-in {
+    color: black; }
 
 .trabajos-titulo {
   margin: 20px;
   font-family: "Electrolize";
   font-size: 3em;
   color: white;
+  transition: .3s ease all;
   transform: translateY(100%);
   margin: 12% 0 10px 20px !important;
   padding: 0 !important; }
+  body.dark .trabajos-titulo {
+    color: black; }
 
 .container-tarjetas {
   display: grid;
@@ -234,7 +323,10 @@
   grid-column: 1 / 2;
   font-family: "Electrolize";
   font-size: 3em;
-  color: #fcfcfc; }
+  color: #fcfcfc;
+  transition: .3s ease all; }
+  body.dark #services {
+    color: black !important; }
 
 #titulo-center {
   grid-row: 2 / 3; }
@@ -246,8 +338,9 @@
 
 .tarjeta1 {
   grid-row: 3 / 4; }
+  body.dark .tarjeta1 {
+    border-color: black; }
   .tarjeta1:hover {
-    color: black;
     background-color: lightgray; }
   .tarjeta1 h1 {
     font-family: "Electrolize";
@@ -255,11 +348,15 @@
     flex-direction: column;
     align-items: center;
     font-size: 35px; }
+    body.dark .tarjeta1 h1 {
+      color: black; }
   .tarjeta1 ul li {
     font-family: "Michroma";
     display: flex;
     flex-direction: column;
     align-items: center; }
+    body.dark .tarjeta1 ul li {
+      color: black; }
 
 #titulo-center2 {
   grid-row: 5 / 6; }
@@ -270,8 +367,9 @@
 
 .tarjeta2 {
   grid-row: 7 / 8; }
+  body.dark .tarjeta2 {
+    border-color: black; }
   .tarjeta2:hover {
-    color: black;
     background-color: lightgray; }
   .tarjeta2 h1 {
     font-family: "Electrolize";
@@ -279,18 +377,25 @@
     flex-direction: column;
     align-items: center;
     font-size: 35px; }
+    body.dark .tarjeta2 h1 {
+      color: black; }
   .tarjeta2 ul li {
     font-family: "Michroma";
     display: flex;
     flex-direction: column;
     align-items: center; }
+    body.dark .tarjeta2 ul li {
+      color: black; }
 
 .titulo-contacto {
   transform: translateY(60px);
   margin: 20px;
   font-family: "Electrolize";
   font-size: 3em;
-  color: white; }
+  color: white;
+  transition: .3s ease all; }
+  body.dark .titulo-contacto {
+    color: black; }
 
 .container {
   transform: translateY(15%); }
@@ -352,13 +457,27 @@
   transform: translateY(-25%);
   margin-left: 50%; }
 
+#other {
+  color: black;
+  background-color: white;
+  font-family: "Michroma";
+  font-size: 13px; }
+  #other:hover {
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-color: white; }
+
 * {
   text-decoration: none !important;
   margin: 0;
   padding: 0; }
 
 body {
-  background-color: black; }
+  background-color: black;
+  transition: .3s ease all; }
+  body.dark {
+    background-color: white; }
 
 /*------------------------------------------------------------------------------INICIO-----------------------------------*/
 @media screen and (max-width: 412px) {

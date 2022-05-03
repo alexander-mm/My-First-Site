@@ -30,6 +30,10 @@
     justify-self: center;
     align-self: end;
     color: white;
+
+    body.dark &{
+        color: black !important;
+    }
 }
 
 .copyright--uppercase{
@@ -55,6 +59,10 @@
     text-transform: uppercase;
     color: white;
     font-size: $font-l;
+
+        body.dark &{
+            color: black !important;
+        }
 }
 
 
@@ -67,6 +75,10 @@
 
 .copyright--uppercase2{
     font-size: $font-l;
+    
+        body.dark &{
+            color: black !important;
+        }
 }
 
 
@@ -86,6 +98,10 @@
     text-transform: uppercase;
     color: white;
     font-size: $font-l;
+
+        body.dark &{
+            color: black;
+        }
 }
 
 
