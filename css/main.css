@@ -479,6 +479,12 @@ body {
   body.dark {
     background-color: white; }
 
+#particles-js {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -10; }
+
 /*------------------------------------------------------------------------------INICIO-----------------------------------*/
 @media screen and (max-width: 412px) {
   .texto-bar {
