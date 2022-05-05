@@ -118,6 +118,9 @@
   border-color: white;
   transition: background-color .8s; }
 
+body.dark .burger {
+  background-color: #535353 !important; }
+
 .navy {
   transition: .3s ease all; }
   body.dark .navy {
@@ -679,7 +682,7 @@ body {
     font-size: 15px; }
   #logo__container {
     transform: translateY(-5%);
-    margin-right: 26%; }
+    padding-right: 26%; }
   #coderlogo {
     width: 18em; }
   .nosotros__titulo2 {
